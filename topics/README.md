@@ -1,24 +1,15 @@
 # E-Book: Guia Completo sobre Git
 
-### 1. Introdução ao Git
+### 1. Iniciando no Universo do Git & GitHub
 - O que é Git?
-- Instalação e configuração inicial do Git
-- Instalação e configuração inicial do GitHub
+- Instalação e Configuração Inicial do Git
+- Instalação e Configuração Inicial do GitHub
 
-### 2. Conceitos Básicos
-- Conceitos fundamentais (Commit, Branch, Merge, etc.)
-- Principais comandos do Git
-- git init
-- git clone
-- git status
-- git add
-- git commit
-- git push
-- git pull
-- Repositórios (locais e remotos)
-- Uso do GitHub (ou outras plataformas de hospedagem de código)
-- Criando e clonando repositórios no GitHub
-- Introdução ao Markdown para documentação
+### 2. Conceitos Fundamentais
+- Introdução aos Repositórios e Conceitos
+- Principais Comandos
+- Criando um Repo Local e Remoto
+- Introdução ao Markdown
 
 ### 3. Trabalhando com Branches
 - Criando e gerenciando branches locais
