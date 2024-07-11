@@ -11,3 +11,9 @@
 - Criando um Repo Local e Remoto
 - Introdução ao Markdown
 
+### 3. Trabalhando com Branches
+- Criando e gerenciando branches locais
+- Mesclando branches (merge)
+- Resolução de conflitos de merge
+- Branches remotos e rastreamento de branches
+- Fluxo de trabalho com branches (Feature Branch, Hotfix, etc.)
