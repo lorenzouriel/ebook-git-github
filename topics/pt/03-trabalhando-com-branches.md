@@ -81,7 +81,7 @@ git pull origin <nome-da-branch-remota>
 git pull
 ```
 
-## Fluxo de Trabalho com Branches (Feature Branch, Hotfix, etc.)
+## Fluxo de Trabalho com Branches (Feature Branch, Hotfix e Release.)
 **1. Feature Branch:**
 - Criar uma nova branch para a feature:
 ```shell

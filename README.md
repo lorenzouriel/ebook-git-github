@@ -12,8 +12,8 @@
 - Introdução ao Markdown
 
 ### 3. Trabalhando com Branches
-- Criando e gerenciando branches locais
-- Mesclando branches (merge)
-- Resolução de conflitos de merge
-- Branches remotos e rastreamento de branches
-- Fluxo de trabalho com branches (Feature Branch, Hotfix, etc.)
+- Criando e Gerenciando Branches Locais
+- Mesclando Branches (Merge)
+    - Resolução de Conflitos de Merge
+    - Branches Remotos e Rastreamento de Branches
+- Fluxo de Trabalho com Branches (Feature Branch, Hotfix e Release.)
