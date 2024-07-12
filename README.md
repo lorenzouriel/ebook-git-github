@@ -19,7 +19,14 @@
 - Fluxo de Trabalho com Branches (Feature Branch, Hotfix e Release.)
 
 ### 4. Sincronização e Colaboração
-- Configurando repositórios remotos
-- Enviando mudanças para o repositório remoto (git push)
-- Obtendo mudanças do repositório remoto (git pull e git fetch)
-- Trabalhando com forks e pull requests
+- Configurando Repositórios Remotos
+- Enviando Mudanças para o Repositório Remoto (`git push`)
+- Obtendo Mudanças do Repositório Remoto (`git pull` e `git fetch`)
+- Trabalhando com Forks e Pull Requests
+- Exemplo de Fluxo Completo
+
+### 5. Gerenciamento de Repositórios
+- Removendo Repositórios Locais
+- Excluindo Repositórios Remotos no GitHub
+- Limpeza de Histórico (Rebase, Squash)
+- Tags e Releases
