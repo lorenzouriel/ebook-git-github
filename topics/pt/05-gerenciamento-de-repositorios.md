@@ -3,7 +3,16 @@
 **1. Remover um repositório localmente:**
 - Para excluir um repositório Git localmente, você pode simplesmente excluir o diretório onde ele está localizado. Por exemplo:
 ```shell
+# bash
 rm -rf /caminho/para/seu/repositório
+git commit -m "Remove tests_git directory"
+git push
+
+# power shell
+git rm -r --cached /projects/portfolio/tests_git
+Remove-Item -Path "C:\Projects\portfolio\tests_git" -Recurse -Force
+git commit -m "Remove tests_git directory"
+git push
 ```
 
 - Use este comando com cautela, pois ele excluirá permanentemente todos os arquivos e o histórico de commits no repositório.
