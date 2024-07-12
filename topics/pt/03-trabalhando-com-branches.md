@@ -133,10 +133,4 @@ git tag -a v<versao> -m "Versão <versao>"
 git checkout develop
 git merge release/<versao>
 ```
-
-- Enviar alterações e tags para o repositório remoto:
-```shell
-git push
-git push --tags
-```
 ---

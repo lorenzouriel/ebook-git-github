@@ -49,17 +49,7 @@
 - Integração com CI/CD (Jenkins, GitHub Actions, GitLab CI)
 - GitFlow
 
-### Estrutura de cada capítulo:
-- Introdução: Descrição geral do tópico.
-- Conceitos Chave: Definições e explicações.
-- Passo a Passo: Instruções detalhadas com exemplos de comandos.
-- Dicas e Truques: Melhores práticas e atalhos.
-- Resolução de Problemas: Soluções para problemas comuns.
-- Recursos Adicionais: Links e referências para aprofundamento.
-
-
------
-
+----
 ### Resumo dos Capítulos
 
 **1. Introdução ao Git**
