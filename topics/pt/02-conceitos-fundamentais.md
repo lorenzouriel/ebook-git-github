@@ -4,7 +4,7 @@ Um repositório é o local onde o projeto, suas alterações e arquivos são arm
 - **Remoto:** Hospedado em plataformas como GitHub, outros sistemas de controle de versão (CVS) ou servidores dedicados.
 - **Local:** Armazenado diretamente na máquina do desenvolvedor.
 
-### Principais Conceitos
+### **Principais Conceitos**
 **Branches (ou Ramos)**
 - As **branches (ou ramos), que são versões paralelas do projeto.** A branch principal geralmente é chamada de **main**, mas é possível criar novas branches para desenvolver alterações específicas sem afetar a branch principal.
     - **Exemplo:** Crie um branch chamada **dev-task-13**, nesse branch você vai focar em finalizar a task 13 do seu backlog, quando finalizar você **commita** e faz um **merge** com a branch principal. Assim, você não afeta o seu branch principal com alterações que podem quebrar o código.
@@ -18,18 +18,18 @@ Um repositório é o local onde o projeto, suas alterações e arquivos são arm
 **Issues**
 - No contexto do Git, uma issue refere-se a uma maneira de rastrear tarefas, melhorias, erros (bugs) ou discussões relacionadas a um projeto específico.
 
-### Estrutura do Repositório
+### **Estrutura do Repositório**
 **Working Tree**
 - A Working Tree é o local onde os arquivos estão realmente armazenados e onde você faz suas alterações.
 
 **Index (Índice)**
 - O index (ou índice) é o local onde o Git armazena o que será commitado. Ele atua como uma área intermediária entre a Working Tree e o repositório Git. Para adicionar arquivos ao índice, usamos o comando: `git add arquivo.txt`
 
-### Arquitetura Git e Conceitos
+### **Arquitetura Git e Conceitos**
 - ![architecture_git](/topics/img/02/architecture_git.jpg)
 
 ## Principais Comandos
-#### `Commit` 
+### **`Commit`**
 Acontece quando queremos salvar as última atualizações que foram realizadas.
 
 **Processos relacionados ao Commit:**
@@ -53,7 +53,7 @@ git commit -m "Primeiro Commit"
 
 O `-m` é utilizado para adicionarmos uma mensagem no commit, em seguida temos o texto `"Primeiro Commit"`.
 
-#### `Push` 
+### **`Push`**
 Acontece quando enviamos as alterações para o repositório - "empurra" as modificações para o repositório remoto
 
 **Processos relacionados ao Push:**
@@ -75,7 +75,7 @@ git push -u origin nome-da-branch
 
 O `-u` estabelece uma relação de acompanhamento, facilitando futuros pushes e pulls.
 
-#### `Pull` 
+### **`Pull`**
 Atualiza o seu repositório local com as alterções no repositório remoto - "puxa" as alterações do repositório remoto.
 
 Ele traz todas as alterações do seu repositório remoto para o local.
@@ -91,7 +91,7 @@ git pull origin nome-da-branch
 git pull
 ```
 
-#### `Tag` 
+### **`Tag`**
 Uma tag no Git é uma referência específica a um ponto na história do seu repositório. É comumente usado para marcar versões estáveis ou importantes do seu projeto. 
 
 As tags são úteis para criar pontos de referência fixos que não se movem à medida que novos commits são feitos.
@@ -116,13 +116,13 @@ git tag -a v1.0 -m "Versão 1.0"
 git push origin v1.0
 ```
 
-#### `init`
+### **`init`**
 Inicializa um novo repositório Git no diretório atual.
 ```shell
 git init
 ```
 
-#### `clone`
+### **`clone`**
 Clona um repositório remoto para o seu computador.
 ```shell
 git clone <url-do-repositorio>

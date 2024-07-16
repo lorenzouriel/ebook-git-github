@@ -27,7 +27,7 @@ Nas configurações do repositório, procure a opção para excluir o repositór
 
 Confirme a exclusão com a senha ou acessando o GitHub Mobile.
 
-## Limpeza de Histórico (Rebase, Squash)
+## Limpeza de Histórico (`Rebase`, `Squash`)
 **1. Rebase:**
 - O rebase é usado para reescrever o histórico de commits. Por exemplo, para rebasear sua branch `feature` na branch `main`:
 ```shell

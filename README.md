@@ -28,5 +28,24 @@
 ### 5. Gerenciamento de Repositórios
 - Removendo Repositórios Locais
 - Excluindo Repositórios Remotos no GitHub
-- Limpeza de Histórico (Rebase, Squash)
+- Limpeza de Histórico (`Rebase`, `Squash`)
 - Tags e Releases
+
+### 6. Práticas Recomendadas
+- Commits Claros e Frequentes
+- Uso de `.gitignore`
+- Reposicionamento de Branches
+- Manutenção de Histórico Limpo e Compreensível
+- Automação de Tarefas com Hooks do Git
+
+### 7. Solução de Problemas
+- Desfazendo Commits (`git revert`, `git reset`, `git checkout`)
+- Resolução de Conflitos Comuns
+- Recuperação de Commits Perdidos
+- Dicas de Troubleshooting
+
+### 8. Ferramentas e Integrações
+- Integração do Git com IDEs Populares
+- Uso de Ferramentas Gráficas para Git
+- Integração com CI/CD
+- GitFlow
