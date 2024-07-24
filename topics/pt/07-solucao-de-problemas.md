@@ -88,7 +88,7 @@ git reflog
 
 - Identifique o commit que você deseja recuperar e use `git checkout` ou `git reset` para restaurá-lo.
 
-### **`git cherry-pick`
+### `git cherry-pick`
 Usado para **aplicar um commit específico de uma branch para outra.**
 
 **Exemplo:**

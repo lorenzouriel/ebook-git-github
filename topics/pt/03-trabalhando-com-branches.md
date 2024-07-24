@@ -66,6 +66,7 @@ git branch -r
 ```shell
 git checkout --track origin/<nome-da-branch-remota>
 ```
+- Só precisa realizar o rastreio se a branch remota não existir em seu repositório local.
 
 3. Atualizar branches remotos:
 ```shell
@@ -76,7 +77,7 @@ git fetch
 ```shell
 git pull origin <nome-da-branch-remota>
 
-# Ou
+# Ou apenas
 
 git pull
 ```
@@ -89,6 +90,7 @@ git checkout -b feature/<nome-da-feature>
 ```
 
 - Trabalhar na feature e fazer commits.
+
 - Mesclar a branch da feature na branch principal (geralmente `main` ou `dev`):
 ```shell
 git checkout main
@@ -102,6 +104,7 @@ git checkout -b hotfix/<nome-do-hotfix> main
 ```
 
 - Trabalhar no hotfix e fazer commits.
+
 - Mesclar a branch do hotfix na branch principal:
 ```shell
 git checkout main
@@ -110,27 +113,36 @@ git merge hotfix/<nome-do-hotfix>
 
 - Mesclar a branch do hotfix na branch de `dev` (se houver):
 ```shell
-git checkout develop
+git checkout dev
 git merge hotfix/<nome-do-hotfix>
 ```
 
 **3. Release Branch:**
 - Criar uma nova branch para a release a partir da branch de desenvolvimento:
 ```shell
-git checkout -b release/<versao> develop
+git checkout -b release/<versao> <nome-da-branch>
+
+# Código
+git checkout -b release/1.0.0 dev
 ```
 
-- Testar e preparar a release, fazendo commits conforme necessário
+- Testar e preparar a release, fazendo commits conforme necessário.
+
 - Mesclar a branch da release na branch principal e taguear a versão:
 ```shell
 git checkout main
 git merge release/<versao>
 git tag -a v<versao> -m "Versão <versao>"
+
+# Código
+git checkout main
+git merge release/1.0.0
+git tag -a v1.0.0 -m "Versão 1.0.0"
 ```
 
 - Mesclar a branch da release de volta na branch de `dev`:
 ```shell
-git checkout develop
+git checkout dev
 git merge release/<versao>
 ```
 ---

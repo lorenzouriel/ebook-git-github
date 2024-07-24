@@ -70,7 +70,7 @@ git clone <url-do-repositório-forkado>
 ```shell
 git remote add upstream <url-do-repositório-original>
 ```
-- O termo "upstream" é utilizado para se referir ao repositório remoto que é a fonte oficial de um projeto. É o repositório principal do qual você geralmente deseja sincronizar as atualizações.
+- O termo "**upstream" é utilizado para se referir ao repositório remoto que é a fonte oficial de um projeto.** É o repositório principal do qual você geralmente deseja sincronizar as atualizações.
 
 **4. Sincronizar o fork com o repositório original:**
 - Buscar mudanças do repositório original:
@@ -90,7 +90,7 @@ git push origin main
 ```
 
 **5. Criar uma pull request:**
-- No GitHub, GitLab ou Bitbucket, use a interface web para criar uma pull request do seu fork para o repositório original. Descreva as mudanças que você fez e solicite a revisão.
+- No GitHub, GitLab ou Bitbucket, **use a interface web para criar uma pull request do seu fork para o repositório original.** Descreva as mudanças que você fez e solicite a revisão.
 
 ## Exemplo de Fluxo Completo
 **1. Adicionar Repositórios Remotos:**
@@ -111,13 +111,33 @@ git push origin main
 ```
 
 **4. Criar uma Pull Request:**
-- No GitHub, vá para o repositório original e clique em "New Pull Request".
+- No GitHub, **vá para o repositório original e clique em "New Pull Request".**
+    - ![example_pull_request](/topics/img/04/pull_request_01.jpg)
+
+- Na aba **Pull Request**, clique em **New Pull Request**
+    - ![example_pull_request](/topics/img/04/pull_request_02.jpg)
+
+- Selecione a branch que possui alterações (`compare:dev`) e a que deseja fazer o merge (`base:main`). Clique em **Create Pull Request**
+    - ![example_pull_request](/topics/img/04/pull_request_03.jpg)
+
+- O GitHub vai navegar para essa aba e testar novamente se as alterações não possuem conflitos, depois da verificação clique em **Merge pull request**
+    - ![example_pull_request](/topics/img/04/pull_request_04.jpg)
+
+- Caso possua essa cultura, já pode deletar a branch direto na etapa de **Pull Request**
+    - ![example_pull_request](/topics/img/04/pull_request_05.jpg)
+
 
 **5. Sincronizar com o Repositório Original:**
+- Após aplicar as alterações, você precisa enviar para o seu repositório local:
 ```shell
 git fetch upstream
 git checkout main
 git merge upstream/main
 git push origin main
+```
+
+- Depois, pode deletar a branch do repositório local:
+```shell
+git checkout -d dev
 ```
 ---
