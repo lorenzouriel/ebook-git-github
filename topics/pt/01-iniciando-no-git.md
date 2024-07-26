@@ -52,7 +52,7 @@ git config --list
 
 **Passo 2: Configurando o Git para usar o GitHub (Windows)**
 - Inicie o Git Bash e gere uma chave SSH para autenticação segura:
-    - No terminal, execute: `ssh-keygen -t rsa -C "lorenzouriel394@gmail.com"`.
+    - No terminal, execute: `ssh-keygen -t rsa -C "seuemail@example.com"`.
     - Pressione Enter para aceitar o local padrão do arquivo.
     - Digite uma senha segura (ou deixe em branco).
 

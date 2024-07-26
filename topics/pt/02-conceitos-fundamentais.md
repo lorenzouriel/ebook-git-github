@@ -19,6 +19,9 @@ Um repositório é o local onde o projeto, suas alterações e arquivos são arm
 - No contexto do Git, uma issue refere-se a uma maneira de rastrear tarefas, melhorias, erros (bugs) ou discussões relacionadas a um projeto específico.
 
 ### **Estrutura do Repositório**
+**HEAD**
+- O `HEAD` é um ponteiro que aponta para o **commit mais recente na branch atual**. Quando você faz um novo commit, o `HEAD` se move para esse novo commit. Ele também é usado para determinar o estado atual da Working Tree e do Index.
+
 **Working Tree**
 - A Working Tree é o local onde os arquivos estão realmente armazenados e onde você faz suas alterações.
 
