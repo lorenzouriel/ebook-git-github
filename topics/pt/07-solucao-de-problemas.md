@@ -178,6 +178,11 @@ git cherry-pick <commit-hash>
 ## Dicas de Troubleshooting
 ### **Diagnóstico de Problemas**
 Use comandos como `git status`, `git log`, e `git diff` para entender o estado atual do repositório e identificar problemas.
+- `git status`: Fornece uma visão geral do estado atual do seu repositório. Ele exibe quais arquivos foram modificados, quais estão prontos para o commit e quais não estão rastreados. Isso ajuda a entender rapidamente o que mudou desde o último commit.
+
+- `git log`: Usado para visualizar o histórico de commits. Isso é útil para identificar mudanças feitas ao longo do tempo e entender como o repositório evoluiu. Você pode adicionar opções como `--oneline` para uma visualização mais concisa ou `--graph` para uma representação gráfica dos commits.
+
+- `git diff`: Compara alterações entre commits, entre o repositório e o diretório de trabalho, ou entre diferentes branches. É útil para revisar alterações específicas em arquivos e entender como o código foi modificado.
 
 ### **Ignorar Arquivos Localmente**
 Se você precisar ignorar mudanças em arquivos que estão rastreados, use

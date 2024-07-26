@@ -1,37 +1,37 @@
 # Trabalhando com Branches
 ## Criando e Gerenciando Branches Locais
-1. Criar uma nova branch:
+**1. Criar uma nova branch:**
 ```shell
 git branch <nome-da-branch>
 ```
 
-2. Mudar para uma branch:
+**2. Mudar para uma branch:**
 ```shell
 git checkout <nome-da-branch>
 ```
 
-3. Criar e mudar para uma nova branch:
+**3. Criar e mudar para uma nova branch:**
 ```shell
 git checkout -b <nome-da-branch>
 ```
 
-4. Listar todas as branches:
+**4. Listar todas as branches:**
 ```shell
 git branch
 ```
 
-5. Renomear uma branch:
+**5. Renomear uma branch:**
 ```shell
 git branch -m <nome-da-branch>
 ```
 
-6. Excluir uma branch:
+**6. Excluir uma branch:**
 ```shell
 git branch -d <nome-da-branch>
 ```
 
 ## Mesclando Branches (Merge)
-1. Mesclar uma branch na branch atual:
+**1. Mesclar uma branch na branch atual:**
 ```shell
 git merge <nome-da-branch>
 ```
@@ -57,23 +57,23 @@ git commit -m "Arquivos conflitantes resolvidos."
 ```
 
 ### Branches Remotos e Rastreamento de Branches
-1. Listar branches remotos:
+**1. Listar branches remotos:**
 ```shell
 git branch -r
 ```
 
-2. Criar uma branch rastreando uma branch remota:
+**2. Criar uma branch rastreando uma branch remota:**
 ```shell
 git checkout --track origin/<nome-da-branch-remota>
 ```
 - Só precisa realizar o rastreio se a branch remota não existir em seu repositório local.
 
-3. Atualizar branches remotos:
+**3. Atualizar branches remotos:**
 ```shell
 git fetch
 ```
 
-4. Mesclar mudanças de uma branch remota na branch atual:
+**4. Mesclar mudanças de uma branch remota na branch atual:**
 ```shell
 git pull origin <nome-da-branch-remota>
 

@@ -5,28 +5,28 @@ Um repositório é o local onde o projeto, suas alterações e arquivos são arm
 - **Local:** Armazenado diretamente na máquina do desenvolvedor.
 
 ### **Principais Conceitos**
-**Branches (ou Ramos)**
-- As **branches (ou ramos), que são versões paralelas do projeto.** A branch principal geralmente é chamada de **main**, mas é possível criar novas branches para desenvolver alterações específicas sem afetar a branch principal.
-    - **Exemplo:** Crie um branch chamada **dev-task-13**, nesse branch você vai focar em finalizar a task 13 do seu backlog, quando finalizar você **commita** e faz um **merge** com a branch principal. Assim, você não afeta o seu branch principal com alterações que podem quebrar o código.
+#### Branches (ou Ramos)
+As **branches (ou ramos) são versões paralelas do projeto.** A branch principal geralmente é chamada de **main**, mas é possível criar novas branches para desenvolver alterações específicas sem afetar a branch principal.
+- **Exemplo:** Crie um branch chamada **dev-task-13**, nesse branch você vai focar em finalizar a task 13 do seu backlog, quando finalizar você **commita** e faz um **merge** com a branch principal. Assim, você não afeta o seu branch principal com alterações que podem quebrar o código.
 
-**Commit**
-- Um **commit** é uma operação que captura o estado atual do projeto. É como tirar uma foto dos arquivos naquele momento. Cada commit tem um identificador único (`hash`) e uma mensagem descritiva.
+#### Commit
+Um **commit** é uma operação que captura o estado atual do projeto. É como tirar uma foto dos arquivos naquele momento. Cada commit tem um identificador único (`hash`) e uma mensagem descritiva.
 
-**Merge**
-- O **merge** é a operação de combinar as mudanças de diferentes branches. Geralmente, você realiza um merge quando deseja integrar as alterações de uma branch de feature ou correção de bug de volta à branch principal.
+#### Merge
+O **merge** é a operação de combinar as mudanças de diferentes branches. Geralmente, você realiza um merge quando deseja integrar as alterações de uma branch de feature ou correção de bug de volta à branch principal.
 
-**Issues**
-- No contexto do Git, uma issue refere-se a uma maneira de rastrear tarefas, melhorias, erros (bugs) ou discussões relacionadas a um projeto específico.
+#### Issues
+No contexto do Git, uma issue refere-se a uma maneira de rastrear tarefas, melhorias, erros (bugs) ou discussões relacionadas a um projeto específico.
 
 ### **Estrutura do Repositório**
-**HEAD**
-- O `HEAD` é um ponteiro que aponta para o **commit mais recente na branch atual**. Quando você faz um novo commit, o `HEAD` se move para esse novo commit. Ele também é usado para determinar o estado atual da Working Tree e do Index.
+#### HEAD
+O `HEAD` é um ponteiro que aponta para o **commit mais recente na branch atual**. Quando você faz um novo commit, o `HEAD` se move para esse novo commit. Ele também é usado para determinar o estado atual da Working Tree e do Index.
 
-**Working Tree**
-- A Working Tree é o local onde os arquivos estão realmente armazenados e onde você faz suas alterações.
+#### Working Tree
+A Working Tree é o local onde os arquivos estão realmente armazenados e onde você faz suas alterações.
 
-**Index (Índice)**
-- O index (ou índice) é o local onde o Git armazena o que será commitado. Ele atua como uma área intermediária entre a Working Tree e o repositório Git. Para adicionar arquivos ao índice, usamos o comando: `git add arquivo.txt`
+#### Index (Índice)
+O index (ou índice) é o local onde o Git armazena o que será commitado. Ele atua como uma área intermediária entre a Working Tree e o repositório Git. Para adicionar arquivos ao índice, usamos o comando: `git add arquivo.txt`
 
 ### **Arquitetura Git e Conceitos**
 - ![architecture_git](/topics/img/02/architecture_git.jpg)

@@ -16,7 +16,8 @@ A principal função do Git é permitir que múltiplas pessoas trabalhem no mesm
 
 ## Instalação e Configuração Inicial do Git
 **Passo 1: Instalação do Git**
-- Para instalar o Git, siga os passos abaixo de acordo com o seu sistema operacional:
+
+Para instalar o Git, siga os passos abaixo de acordo com o seu sistema operacional:
 
 **Windows:**
 - Baixe o instalador do Git no site oficial: https://git-scm.com/.
@@ -32,6 +33,7 @@ A principal função do Git é permitir que múltiplas pessoas trabalhem no mesm
     - Debian/Ubuntu: `sudo apt-get install git`.
 
 **Passo 2: Configuração inicial do Git**
+
 Após instalar o Git, é necessário configurá-lo. Use os seguintes comandos no terminal para configurar seu nome de usuário e email, que serão usados em seus commits:
 ```shell
 git config --global user.name "Seu Nome"

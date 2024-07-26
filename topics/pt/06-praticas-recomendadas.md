@@ -1,11 +1,11 @@
 # Práticas Recomendadas
 ## Commits Claros e Frequentes
-**Commits Frequentes:**
+#### Commits Frequentes:
 - Faça commits pequenos e frequentes para facilitar a identificação de problemas e a reversão de mudanças específicas.
 - Cada commit deve representar uma única mudança lógica no código.
 - Toda alteração deve ter um commit.
 
-**Mensagens de Commit Claras:**
+#### Mensagens de Commit Claras:
 - Use mensagens de commit descritivas e significativas.
 - A linha deve ser um resumo curto e conciso (50 caracteres ou menos), pode adicionar uma descrição mais detalhada, se necessário.
 ```shell
@@ -14,7 +14,7 @@ git commit -m "Adiciona testes unitários para o módulo de autenticação"
 ```
 
 ## Uso de `.gitignore`
-**Criar e Usar o Arquivo `.gitignore`:**
+#### Criar e Usar o Arquivo `.gitignore`:
 - O arquivo `.gitignore` é usado para especificar quais arquivos e diretórios devem ser ignorados pelo Git.
 
 - Exemplos comuns incluem arquivos de configuração local, diretórios de build, e arquivos temporários.
@@ -41,7 +41,7 @@ Exemplo de um arquivo `.gitignore`:
 - Para criar ou editar o arquivo `.gitignore`, adicione-o na raiz do seu repositório.
 
 ## Reposicionamento de Branches
-**Rebase em vez de Merge:**
+#### Rebase em vez de Merge:
 Use `git rebase` para aplicar commits de uma branch no topo de outra, criando um histórico mais linear.
 ```shell
 git checkout feature-branch
@@ -54,7 +54,7 @@ Resolve conflitos se necessário e continue com:
 git rebase --continue
 ```
 
-**Mesclar Branches:**
+#### Mesclar Branches:
 Use `git merge` para combinar mudanças de uma branch em outra, preservando o histórico de commits.
 ```shell
 git checkout main
@@ -62,7 +62,7 @@ git merge feature-branch
 ```
 
 ## Manutenção de Histórico Limpo e Compreensível
-**Rebase Interativo para Limpar Histórico:**
+#### Rebase Interativo para Limpar Histórico:
 Use `git rebase -i` para reordenar, editar, combinar (squash) ou descartar commits.
 ```shell
 git rebase -i HEAD~n
@@ -72,7 +72,7 @@ git rebase -i HEAD~n
 Evite commits de merge desnecessários usando `git pull --rebase` em vez de `git pull`.
 
 ## Automação de Tarefas com Hooks do Git
-**Configurar Hooks do Git:**
+#### Configurar Hooks do Git:
 Os hooks do Git são scripts que são executados automaticamente em determinados eventos, como antes de um commit ou após um push.
 
 Exemplos de hooks incluem `pre-commit`, `pre-push`, `post-commit`, entre outros.
