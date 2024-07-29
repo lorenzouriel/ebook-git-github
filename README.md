@@ -17,8 +17,8 @@ Eu foco em abordar os principais conceitos e adiciono bastante comando para prat
 
 ## 🚀 Download
 Para baixar uma cópia do e-book, use um dos seguintes links:
-- Modo escuro
-- Modo claro
+- [Modo escuro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-pt/export/git-ebook-dark.pdf)
+- [Modo claro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-pt/export/git-ebook-light.pdf)
 
 ## 📖 Capítulos
 Os capítulos focam em construir uma base sólida dos conceitos, seguidos por exemplos práticos e scripts.
@@ -68,8 +68,8 @@ I focus on covering the core concepts and add plenty of practice commands to hel
 
 ## 🚀 Download
 To download a copy of the e-book, use one of the following links:
-- Dark Mode
-- Light Mode
+- [Dark Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-en/export/git-ebook-dark.pdf)
+- [Light Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-en/export/git-ebook-light.pdf)
 
 ## 📖 Chapters
 Chapters focus on building a solid foundation of concepts, followed by practical examples and scripts.
