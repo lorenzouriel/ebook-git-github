@@ -1,51 +1,48 @@
-# E-Book: Guia Completo sobre Git
+# 💡Git & GitHub E-Book
 
-### 1. Iniciando no Universo do Git & GitHub
-- O que é Git?
-- Instalação e Configuração Inicial do Git
-- Instalação e Configuração Inicial do GitHub
+Bem-vindo ao **Git E-Book**! Este livro é um guia completo para dominar o Git, ideal para iniciantes e desenvolvedores experientes.
 
-### 2. Conceitos Fundamentais
-- Introdução aos Repositórios e Conceitos
-- Principais Comandos
-- Criando um Repo Local e Remoto
-- Introdução ao Markdown
+## 🚀 Download
+To download a copy of the ebook use one of the following links:
 
-### 3. Trabalhando com Branches
-- Criando e Gerenciando Branches Locais
-- Mesclando Branches (Merge)
-    - Resolução de Conflitos de Merge
-    - Branches Remotos e Rastreamento de Branches
-- Fluxo de Trabalho com Branches (Feature Branch, Hotfix e Release.)
+- Dark mode
 
-### 4. Sincronização e Colaboração
-- Configurando Repositórios Remotos
-- Enviando Mudanças para o Repositório Remoto (`git push`)
-- Obtendo Mudanças do Repositório Remoto (`git pull` e `git fetch`)
-- Trabalhando com Forks e Pull Requests
-- Exemplo de Fluxo Completo
+- Light mode
 
-### 5. Gerenciamento de Repositórios
-- Removendo Repositórios Locais
-- Excluindo Repositórios Remotos no GitHub
-- Limpeza de Histórico (`Rebase`, `Squash`)
-- Tags e Releases
+## 📖 Chapters
+The first 13 chapters would be purely focused on getting some solid Bash scripting foundations then the rest of the chapters would give you some real life examples and scripts.
 
-### 6. Práticas Recomendadas
-- Commits Claros e Frequentes
-- Uso de `.gitignore`
-- Reposicionamento de Branches
-- Manutenção de Histórico Limpo e Compreensível
-- Automação de Tarefas com Hooks do Git
+About the book
+Introduction to Bash scripting
+Bash Structure
+Bash Hello World
+Bash Variables
+Bash User Input
+Bash Comments
+Bash Arguments
+Bash Arrays
+Bash Conditional Expressions
+Bash Conditionals
 
-### 7. Solução de Problemas
-- Desfazendo Commits (`git revert`, `git reset`, `git checkout`)
-- Resolução de Conflitos Comuns
-- Recuperação de Commits Perdidos
-- Dicas de Troubleshooting
+# 🤲 Contributing
+If you are contributing 🍿 please read the contributing file before submitting your pull requests.
 
-### 8. Ferramentas e Integrações
-- Integração do Git com IDEs Populares
-- Uso de Ferramentas Gráficas para Git
-- Integração com CI/CD
-- GitFlow
+
+# 👋 About the author
+My name is Bobby Iliev, and I have been working as a Linux DevOps Engineer since 2014. I am an avid Linux lover and supporter of the open-source movement philosophy. I am always doing that which I cannot do in order that I may learn how to do it, and I believe in sharing knowledge.
+
+I think it's essential always to keep professional and surround yourself with good people, work hard, and be nice to everyone. You have to perform at a consistently higher level than others. That's the mark of a true professional.
+
+For more information, please visit my blog at https://bobbyiliev.com, follow me on Twitter @bobbyiliev_ and YouTube.
+
+In case that you want to support me you can Buy Me a Coffee here:
+
+[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_logos/black_img.png)](https://www.buymeacoffee.com/yourusername)
+
+## 📧 Contato
+
+Para qualquer dúvida ou feedback, sinta-se à vontade para entrar em contato comigo:
+
+- [Blog](https://lorenzouriel.github.io/)
+- [E-mail](mailto:lorenzouriel394@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/lorenzo-uriel/)

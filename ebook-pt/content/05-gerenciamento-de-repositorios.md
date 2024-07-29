@@ -21,9 +21,9 @@ git push
 Vá para a página do repositório no serviço de hospedagem.
 
 Nas configurações do repositório, procure a opção para excluir o repositório.
-- ![delete_repository](/topics/img/05/delete_repository.jpg)
+- ![delete_repository](content/imgs/05/delete_repository.jpg)
 
-- ![delete_repository_2](/topics/img/05/delete_repository_2.jpg)
+- ![delete_repository_2](content/imgs/05/delete_repository_2.jpg)
 
 Confirme a exclusão com a senha ou acessando o GitHub Mobile.
 
@@ -155,11 +155,11 @@ git push origin --delete <nome-da-tag>
 **8. Criar uma Release no GitHub:**
 - No GitHub, vá para a página do repositório.
 - Vá para a seção "Code" > "Create a New Release".
-- ![release](/topics/img/05/release.jpg)
+- ![release](content/imgs/05/release.jpg)
 
 - Preencha as informações, adicione a tag e clique em "Publish a New Release":
-- ![release_2](/topics/img/05/release_2.jpg)
+- ![release_2](content/imgs/05/release_2.jpg)
 
 - Suas releases ficam organizados na seção "Code"
-- ![release_3](/topics/img/05/release_3.jpg)
+- ![release_3](content/imgs/05/release_3.jpg)
 ---

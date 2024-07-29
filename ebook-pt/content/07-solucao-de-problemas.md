@@ -75,7 +75,7 @@ Quando um conflito de merge ocorre, o Git marca os arquivos conflitantes para qu
 git merge <branch-name>
 ```
 Resolva os conflitos editando os arquivos conflitantes. Exemplo de mensagem:
-![merge](/topics/img/07/merge_head.jpg)
+![merge](content/imgs/07/merge_head.jpg)
 
 ```bash
 loren@ MINGW64 /c/Projects/portfolio/git_study (main)
@@ -212,13 +212,4 @@ Se você encontrar problemas ao fazer push ou pull, como rejeições de push, pr
 git fetch
 ```
 - Resolva quaisquer conflitos, então tente novamente
-
-## Resumo
-- **Desfazer commits:** Use `git revert` para desfazer mudanças de um commit específico preservando o histórico. Use `git reset` para redefinir o repositório para um estado anterior, com várias opções de modo (`soft`, `mixed`, `hard`). Use `git checkout` para mudar branches ou restaurar arquivos específicos.
-
-- **Resolução de conflitos comuns:** Resolva conflitos de `merge` e `rebase` manualmente, editando os arquivos conflitantes e marcando-os como resolvidos.
-
-- **Recuperação de commits perdidos:** Use `git reflog` para ver o histórico de HEADs e recuperar commits perdidos. Use `git cherry-pick` para aplicar commits específicos de uma branch para outra.
-
-- **Dicas de troubleshooting:** Use comandos de diagnóstico (`git status`, `git log`, `git diff`) para entender o estado do repositório. Ignore mudanças em arquivos rastreados com git update-index. Descarte mudanças locais com `git checkout` e `git reset`. Resolva problemas de push/pull sincronizando com `git fetch` primeiro.
 ---

@@ -29,7 +29,7 @@ A Working Tree é o local onde os arquivos estão realmente armazenados e onde v
 O index (ou índice) é o local onde o Git armazena o que será commitado. Ele atua como uma área intermediária entre a Working Tree e o repositório Git. Para adicionar arquivos ao índice, usamos o comando: `git add arquivo.txt`
 
 ### **Arquitetura Git e Conceitos**
-- ![architecture_git](/topics/img/02/architecture_git.jpg)
+- ![architecture_git](content/imgs/02/architecture_git.jpg)
 
 ## Principais Comandos
 ### **`Commit`**
@@ -133,7 +133,7 @@ git clone <url-do-repositorio>
 
 ## Criando um Repo Local e Remoto
 **1. Vá até o seu GitHub e crie um novo repositório:**
-- ![1](/topics/img/02/1.png)
+- ![1](content/imgs/02/1.png)
 
 **2. Navegue até o diretório local onde deseja criar o repositório — use o comando cd para entrar no diretório desejado.**
 ```shell
@@ -181,7 +181,7 @@ git push -u origin main
 ```
 
 Podemos verificar o nosso repositório remoto:
-- ![10](/topics/img/02/10.png)
+- ![10](content/imgs/02/10.png)
 
 ### O que é Versionamento e Tags?
 Já trabalhou com lançamento de versões?
@@ -201,7 +201,7 @@ Vou te explicar a diferença de forma simples e prática:
 - **Build:** É um controle interno do Git e do versionamento, ele não fica necessariamente à vista quando você especifica a versão.
 
 **Exemplo:**
-- ![tags_versioning](/topics/img/02/tags_versioning.png)
+- ![tags_versioning](content/imgs/02/tags_versioning.png)
 
 ## Introdução ao Markdown
 Markdown é uma linguagem de marcação leve usada para formatar texto de forma simples e fácil de ler. 
@@ -266,5 +266,5 @@ Este é um **projeto incrível** que usa _tecnologias modernas_.
 
 #### Código:
 - Para incluir blocos de código, utilize três acentos graves antes e depois do bloco. Você pode especificar a linguagem de programação para realce de sintaxe.
-    - ![md_code](/topics/img/02/md_code.png)
+    - ![md_code](content/imgs/02/md_code.png)
 ---
