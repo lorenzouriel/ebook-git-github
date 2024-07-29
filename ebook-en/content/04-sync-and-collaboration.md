@@ -1,4 +1,4 @@
-# Sync and Collaboration
+# Synchronization and Collaboration
 
 ## Setting Up Remote Repositories
 **1. Add a remote repository:**
