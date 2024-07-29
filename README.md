@@ -2,11 +2,11 @@
 
 <div align="center">
     <p>
-	    <a name="stars"><img src="https://img.shields.io/github/stars/bobbyiliev/introduction-to-bash-scripting?style=for-the-badge"></a>
-	    <a name="forks"><img src="https://img.shields.io/github/forks/bobbyiliev/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
-	    <a name="contributions"><img src="https://img.shields.io/github/contributors/bobbyiliev/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+	    <a name="stars"><img src="https://img.shields.io/github/stars/lorenzouriel/ebook-git-github?style=for-the-badge"></a>
+	    <a name="forks"><img src="https://img.shields.io/github/forks/lorenzouriel/ebook-git-github?logoColor=green&style=for-the-badge"></a>
+	    <a name="contributions"><img src="https://img.shields.io/github/contributors/lorenzouriel/ebook-git-github?logoColor=green&style=for-the-badge"></a>
 	    <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
-	    <a name="license"><img src="https://img.shields.io/github/license/bobbyiliev/introduction-to-bash-scripting?style=for-the-badge"></a>
+	    <a name="license"><img src="https://img.shields.io/github/license/lorenzouriel/ebook-git-github?style=for-the-badge"></a>
     </p>
 </div>
 
