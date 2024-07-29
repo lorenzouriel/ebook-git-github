@@ -1,48 +1,101 @@
-# 💡Git & GitHub E-Book
+<p align="center"><img src="https://i.imgur.com/iUJcR0w.png" height="450" width="auto"></p>
 
-Bem-vindo ao **Git E-Book**! Este livro é um guia completo para dominar o Git, ideal para iniciantes e desenvolvedores experientes.
+<div align="center">
+    <p>
+	    <a name="stars"><img src="https://img.shields.io/github/stars/bobbyiliev/introduction-to-bash-scripting?style=for-the-badge"></a>
+	    <a name="forks"><img src="https://img.shields.io/github/forks/bobbyiliev/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+	    <a name="contributions"><img src="https://img.shields.io/github/contributors/bobbyiliev/introduction-to-bash-scripting?logoColor=green&style=for-the-badge"></a>
+	    <a name="madeWith"><img src="https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg?style=for-the-badge"></a>
+	    <a name="license"><img src="https://img.shields.io/github/license/bobbyiliev/introduction-to-bash-scripting?style=for-the-badge"></a>
+    </p>
+</div>
+
+## 💡 Git & GitHub E-Book
+Bem-vindo ao meu **E-Book de Git & GitHub**! Este livro é um guia para você iniciar no Git e o GitHub.
+
+Eu foco em abordar os principais conceitos e adiciono bastante comando para praticarmos juntos, capacitando-o a gerenciar seu código e colaborar com outros de forma mais eficaz. Independente da área, dominar o Git e o GitHub permitirá que você otimize seus processos e gerencie seus projetos de maneira mais eficaz.
 
 ## 🚀 Download
-To download a copy of the ebook use one of the following links:
+Para baixar uma cópia do e-book, use um dos seguintes links:
+- Modo escuro
+- Modo claro
 
-- Dark mode
+## 📖 Capítulos
+Os capítulos focam em construir uma base sólida dos conceitos, seguidos por exemplos práticos e scripts.
 
-- Light mode
-
-## 📖 Chapters
-The first 13 chapters would be purely focused on getting some solid Bash scripting foundations then the rest of the chapters would give you some real life examples and scripts.
-
-About the book
-Introduction to Bash scripting
-Bash Structure
-Bash Hello World
-Bash Variables
-Bash User Input
-Bash Comments
-Bash Arguments
-Bash Arrays
-Bash Conditional Expressions
-Bash Conditionals
-
-# 🤲 Contributing
-If you are contributing 🍿 please read the contributing file before submitting your pull requests.
+* [**Iniciando no Universo do Git & GitHub**](/ebook-pt/content/01-iniciando-no-git.md)
+* [**Conceitos Fundamentais**](/ebook-pt/content/02-conceitos-fundamentais.md)
+* [**Trabalhando com Branches**](/ebook-pt/content/03-trabalhando-com-branches.md)
+* [**Sincronização e Colaboração**](/ebook-pt/content/04-colaboracao-e-sincronizacao.md)
+* [**Gerenciamento de Repositórios**](/ebook-pt/content/05-gerenciamento-de-repositorios.md)
+* [**Práticas Recomendadas**](/ebook-pt/content/06-praticas-recomendadas.md)
+* [**Solução de Problemas**](/ebook-pt/content/07-solucao-de-problemas.md)
+* [**Ferramentas e Integrações**](/ebook-pt/content/08-ferramentas-e-integracoes.md)
 
 
-# 👋 About the author
-My name is Bobby Iliev, and I have been working as a Linux DevOps Engineer since 2014. I am an avid Linux lover and supporter of the open-source movement philosophy. I am always doing that which I cannot do in order that I may learn how to do it, and I believe in sharing knowledge.
+## 🤲 Contribuindo
+Se desejar contribuir, por favor, envie a sua pull request para análise.
 
-I think it's essential always to keep professional and surround yourself with good people, work hard, and be nice to everyone. You have to perform at a consistently higher level than others. That's the mark of a true professional.
+## 👋 Sobre o Autor
+Meu nome é **Lorenzo Uriel**, atualmente sou Administrador de Banco de Dados. Graduado em Sistemas de Informação pela Anhanguera Educacional e pós-graduado em Gestão de Projetos pelo Instituto Mackenzie.
 
-For more information, please visit my blog at https://bobbyiliev.com, follow me on Twitter @bobbyiliev_ and YouTube.
+Estou sempre fazendo o que eu posso para compartilhar meus aprendizados e conhecimento com a comunidade, esse e-book é um reflexo disso.
 
-In case that you want to support me you can Buy Me a Coffee here:
-
-[![Buy Me a Coffee](https://www.buymeacoffee.com/assets/img/custom_logos/black_img.png)](https://www.buymeacoffee.com/yourusername)
+Você pode me seguir nas minhas redes e acompanhar um pouco mais do meu trabalho:
+- [Me siga aqui!](https://linktr.ee/lorenzo_uriel)
 
 ## 📧 Contato
 
 Para qualquer dúvida ou feedback, sinta-se à vontade para entrar em contato comigo:
 
-- [Blog](https://lorenzouriel.github.io/)
 - [E-mail](mailto:lorenzouriel394@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/lorenzo-uriel/)
+
+
+---
+---
+---
+---
+---
+---
+---
+
+<p align="center"><img src="https://i.imgur.com/Rdkx8RT.jpeg" height="450" width="auto"></p>
+
+## 💡 Git & GitHub E-Book
+Welcome to my **Git & GitHub E-Book**! This book is a guide to get you started with Git and GitHub.
+
+I focus on covering the core concepts and add plenty of practice commands to help you manage your code and collaborate with others more effectively. Regardless of your field, mastering Git and GitHub will allow you to streamline your processes and manage your projects more effectively.
+
+## 🚀 Download
+To download a copy of the e-book, use one of the following links:
+- Dark Mode
+- Light Mode
+
+## 📖 Chapters
+Chapters focus on building a solid foundation of concepts, followed by practical examples and scripts.
+
+* [**Getting Started in the Git & GitHub Universe**](/ebook-en/content/01-getting-started.md)
+* [**Fundamental Concepts**](/ebook-en/content/02-fundamental-concepts.md)
+* [**Working with Branches**](/ebook-en/content/03-working-with-branches.md)
+* [**Synchronization and Collaboration**](/ebook-en/content/04-sync-and-collaboration.md)
+* [**Repository Management**](/ebook-en/content/05-repository-management.md)
+* [**Best Practices**](/ebook-en/content/06-best-practices.md)
+* [**Troubleshooting**](/ebook-en/content/07-troubleshooting.md)
+* [**Tools and Integrations**](/ebook-en/content/08-tools-and-integrations.md)
+
+## 🤲 Contributing
+If you wish to contribute, please submit your pull request for review.
+
+## 👋 About the Author
+My name is **Lorenzo Uriel**, I am currently a Database Administrator. I have a degree in Information Systems from Anhanguera Educacional and a postgraduate degree in Project Management from Instituto Mackenzie.
+
+I am always doing what I can to share my learnings and knowledge with the community, this e-book is a reflection of that.
+
+You can follow me on my social networks and see a little more of my work:
+- [Follow me here!](https://linktr.ee/lorenzo_uriel)
+
+## 📧 Contact
+
+For any questions or feedback, feel free to contact me:
+
+- [E-mail](mailto:lorenzouriel394@gmail.com)
