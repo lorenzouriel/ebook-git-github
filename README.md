@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/iUJcR0w.png" height="450" width="auto"></p>
+<p align="center"><img src="https://i.imgur.com/ZNCmHE6.jpeg" height="450" width="auto"></p>
 
 <div align="center">
     <p>
@@ -59,7 +59,7 @@ Para qualquer dúvida ou feedback, sinta-se à vontade para entrar em contato co
 ---
 ---
 
-<p align="center"><img src="https://i.imgur.com/Rdkx8RT.jpeg" height="450" width="auto"></p>
+<p align="center"><img src="https://i.imgur.com/8Hv1mgT.jpeg" height="450" width="auto"></p>
 
 ## 💡 Git & GitHub E-Book
 Welcome to my **Git & GitHub E-Book**! This book is a guide to get you started with Git and GitHub.
