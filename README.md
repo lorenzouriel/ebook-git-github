@@ -11,7 +11,7 @@
 </div>
 
 ## 💡 Git & GitHub E-Book
-Bem-vindo ao meu **E-Book de Git & GitHub**! Este livro é um guia para você iniciar no Git e o GitHub.
+Bem-vindo ao meu **E-Book de Git & GitHub**! Este livro é um guia para você iniciar no Git e GitHub.
 
 Eu foco em abordar os principais conceitos e adiciono bastante comando para praticarmos juntos, capacitando-o a gerenciar seu código e colaborar com outros de forma mais eficaz. Independente da área, dominar o Git e o GitHub permitirá que você otimize seus processos e gerencie seus projetos de maneira mais eficaz.
 
