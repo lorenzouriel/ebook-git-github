@@ -3,7 +3,7 @@ GitHub no longer supports password authentication for HTTPS Git operations as of
 
 To resolve this, you need to use one of the currently supported authentication methods. The most common way is to use a personal access token (PAT) or use an SSH key.
 
-In this chapter I will teach you how to configure your SSH key.
+## SSH
 
 ### 1. Check for Existing SSH Keys
 Before generating a new SSH key, check if you already have one on your syste

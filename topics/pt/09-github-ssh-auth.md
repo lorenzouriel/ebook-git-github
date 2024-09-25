@@ -3,7 +3,7 @@ O GitHub não oferece mais suporte à autenticação por senha para operações 
 
 Para resolver isso, você precisa usar um dos métodos de autenticação suportados atualmente. A maneira mais comum é usar um token de acesso pessoal (PAT) ou usar uma chave SSH.
 
-Neste capítulo vou te ensinar como configurar sua chave SSH.
+## SSH
 
 ### 1. Verifique as chaves SSH existentes
 Antes de gerar uma nova chave SSH, verifique se você já possui uma em seu sistema
