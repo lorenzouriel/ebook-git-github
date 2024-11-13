@@ -1,62 +1,69 @@
-# Dicas de Criação de Branchs e Commits
-Uma dica para você que está com dúvida do que adicionar no seu commit e como nomear uma branch.
+# Git Restore e Git Switch
 
-### Commits
-Aqui estão algumas dicas para você que está em dúvida sobre como nomear seus commits:
+A partir da versão 2.23 do Git, dois novos comandos, `git restore` e `git switch`, foram introduzidos para simplificar os fluxos de trabalho para restaurar arquivos e alternar ramificações. Esses comandos foram projetados para substituir usos específicos do antigo comando `git checkout`, que lidava com múltiplas funções e às vezes poderia ser confuso.
 
-- **Feat**: Usado quando você está adicionando uma nova funcionalidade.
-  - Exemplo: `feat: adicionar funcionalidade de login`
+### 1. Restauração do Git
+O comando `git restore` concentra-se na restauração de arquivos em seu diretório de trabalho. Ele fornece uma maneira mais intuitiva de descartar alterações, permitindo redefinir os arquivos para seu estado no index (staging area) ou em um commit específico.
 
-- **Fix**: Usado para corrigir um bug ou erro.
-  - Exemplo: `fix: corrigir erro de autenticação`
+**Sintaxe Básica:**
+```bash
+git restore <opções> <arquivo>
+```
 
-- **Style**: Usado para mudanças de formatação, como espaçamento ou estilo de código, sem alterar a lógica.
-  - Exemplo: `style: ajustar espaçamento nos botões`
+**Opções comuns:**
+- `--source <commit-hash>`: Restaura os arquivos para o estado em que estavam em um commit específico.
+- `--staged`: Restaura arquivos na área de teste (o index).
+- `--worktree`: Restaura arquivos apenas no diretório de trabalho (default).
 
-- **Refactor**: Usado para refatorar código sem adicionar novas funcionalidades ou corrigir bugs.
-  - Exemplo: `refactor: reorganizar módulo de usuários`
+**Exemplos:**
 
-- **Revert**: Usado para reverter commits anteriores.
-  - Exemplo: `revert: reverter alteração de dependências`
+- Restaure um arquivo no diretório de trabalho para corresponder ao último commit:
+```bash
+git restore <arquivo>
+```
 
-- **Delete**: Usado para remover código, arquivos ou dependências que não são mais necessários.
-  - Exemplo: `delete: remover módulo depreciado`
+- Faça um unstage de um arquivo (removê-lo do teste sem excluir as alterações):
+```bash
+git restore --staged <arquivo>
+```
 
-- **Update**: Usado para atualizações pequenas, como de documentação ou dependências.
-  - Exemplo: `update: atualizar README`
+- Restaure um arquivo para corresponder a um commit anterior:
+```bash
+git restore --source <commit-hash> <arquivo>
+```
 
-- **Build**: Usado para mudanças no sistema de build ou nas dependências.
-  - Exemplo: `build: atualizar configuração do Webpack`
+## 2. Git Switch
+O comando `git switch` simplifica o processo de alteração de ramificações ou criação de novas. Ele fornece uma maneira mais intuitiva e focada de gerenciar filiais em comparação com o git checkout.
 
-- **Config**: Usado para mudanças nas configurações da aplicação ou do ambiente.
-  - Exemplo: `config: ajustar variáveis de ambiente`
+**Sintaxe Básica:**
+```bash
+git switch <opções> <ramo>
+```
 
-- **Chore**: Usado para tarefas menores ou de manutenção que não alteram o código-fonte diretamente.
-  - Exemplo: `chore: limpar arquivos não utilizados`
+**Opções comuns:**
+- `-c <branch>`: Cria um novo branch e alterna para ele.
+- `-C <branch>`: Cria uma nova ramificação ou redefine a ramificação se ela já existir.
+- `--detach`: Muda para um commit específico no estado "detached HEAD" (não em qualquer branch).
+- `--discard-changes`: Descarta quaisquer alterações não confirmadas ao alternar entre ramificações.
 
-- **CI**: Usado para mudanças na configuração de integração contínua.
-  - Exemplo: `ci: ajustar pipeline do GitHub Actions`
+**Exemplos:**
 
-- **Docs**: Usado para mudanças ou adição de documentação.
-  - Exemplo: `docs: adicionar exemplos de uso da API`
+- Mude para uma filial existente:
+```bash
+git switch feature/develop-database
+```
 
-- **Perf**: Usado para otimizações de performance.
-  - Exemplo: `perf: melhorar desempenho da consulta ao banco`
+- Crie e mude para um novo branch:
+```bash
+git switch -c feature/develop-database
+```
 
-- **Test**: Usado para adicionar ou modificar testes.
-  - Exemplo: `test: adicionar testes unitários para módulo de login`
+- Mude para um commit específico em um estado HEAD desanexado:
+```bash
+git switch --detach <commit-hash>
+```
 
-# Branches e Git Flow
-No **Git Flow**, as branches seguem uma estrutura definida para organizar o fluxo de desenvolvimento. Aqui estão as dicas de como nomear as branches dentro desse fluxo:
-
-- **Feat**: Usado para adicionar uma nova funcionalidade. Geralmente criado a partir da branch `develop`.
-  - Exemplo: `feature/nova-funcionalidade-login`
-
-- **Fix e Hotfix**: Usado para corrigir bugs ou erros. Geralmente criado a partir de `develop` ou `hotfix` (se for uma correção urgente).
-  - Exemplo: `fix/corrigir-erro-autenticacao` - `hotfix/corrigir-erro-produção`
-
-- **Refactor**: Usado para refatorar código sem mudar a funcionalidade. Criado a partir de `develop`.
-  - Exemplo: `refactor/reorganizar-modulo-usuario` 
-
-- **Release**: Usado para preparar uma nova versão do código, geralmente criado a partir de `develop` e depois mesclado em `main` e `develop`.
-  - Exemplo: `release/1.0.0`
+### Principais diferenças do Git Checkout
+- `git restore` serve para modificar arquivos no diretório de trabalho ou índice.
+- `git switch` é para mudar de branch.
+- `git checkout` ainda existe e pode ser usado, mas `git restore` e `git switch` oferecem mais clareza e são melhores para casos de uso específicos.
