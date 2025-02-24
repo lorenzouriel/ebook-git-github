@@ -59,8 +59,10 @@ git reset --mixed <commit-hash>
 git reset --hard <commit-hash>
 ```
 
-### **`git checkout`**
-Used to **change branches or restore files in the working directory.** `Checkout` does not affect history. ```bash
+### `git checkout`
+Used to **change branches or restore files in the working directory.** `Checkout` does not affect history. 
+
+```bash
 git checkout <branch-name>
 git checkout <commit-hash> -- <file-path>
 ```

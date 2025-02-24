@@ -104,84 +104,39 @@ To delete a remote repository on GitHub, follow these steps:
 - ![delete_repository_2](/topics/imgs/05/delete_repository_2.jpg)
 4. Confirm the deletion by entering your password or using GitHub Mobile.
 
-
-## Working with Tags
-
-## Working with Releases
-
-## Working with Forks and Pull Requests
-Forking a repository allows you to contribute to a project without modifying the original repository directly. It's a way to contribute with Open-Source projects.
-
-### 1. Fork a Repository
-On GitHub  use the web interface to fork the desired repository.
-- ![fork](/topics/imgs/04/fork.png)
-
-### 2. Clone the Forked Repository
-```bash
-git clone https://github.com/lorenzouriel/opentelemetry-python-contrib.git
-```
-- This creates a local copy of your forked repository.
-
-### 3. Add an Upstream Repository to Sync With the Original Project
-```bash
-git remote add upstream https://github.com/open-telemetry/opentelemetry-python-contrib.git
-```
-- The **upstream** repository refers to the original repository from which you forked.
-
-### 4. Sync your Fork With the Original Repository
-Fetch changes from the upstream repository:
-```bash
-git fetch upstream
-```
-
-- Merge updates into your main branch:
-```bash
-git checkout main
-git merge upstream/main
-```
-
-- Push the updates to your fork:
-
-```bash
-git push origin main
-```
-
-### 5. Create a Pull Request
-- On GitHub, **go to the original repository and click "New Pull Request".**
-- Compare changes between your fork and the original repository.
-- Click **Create Pull Request** and add a descriptive message.
-- Once reviewed and approved, the maintainer can merge your contribution.
-
 ## Complete Flow Example
 This example demonstrates a full workflow for contributing via a fork and pull request:
 
-### 1. Add Remote Repositories
+### 1. Clone the Repository
 ```bash
-git remote add origin https://github.com/lorenzouriel/opentelemetry-python-contrib.git
-git remote add upstream https://github.com/open-telemetry/opentelemetry-python-contrib.git
+git clone https://github.com/lorenzouriel/ebook-git-github.git
+git remote add upstream https://github.com/lorenzouriel/ebook-git-github.git
+
+cd ebook-git-github/
 ```
 
 ### 2. Create a New Branch, Make Changes, and Commit
 ```bash
-git checkout -b my-feature
+git checkout -b my-chapter
 # Modify files
 
 git add .
-git commit -m "Added a new feature"
+git commit -m "Added a new chapter"
 ```
 
 ### 3. Push Changes to Your Fork
 ```bash
-git push origin my-feature
+git push
 ```
 
 ### 4. Create a Pull Request via GitHub
 - Navigate to the original repository.
 - Click "New Pull Request".
-- Select your branch (`my-feature`) and the main branch of the original repository.
+- Select your branch (`my-chapter`) and the main branch of the original repository.
 - Add a description and submit the pull request.
 
-**5. Sync with the Original Repository After a Merge:**
+### 5. Sync with the Original Repository After a Merge
+
 Update your local repository with the latest changes:
 ```bash
 git fetch upstream
@@ -194,19 +149,19 @@ git merge upstream/main
 git push
 ```
 
-**6. Delete the Merged Branch:**
+### 6. Delete the Merged Branch
 ```bash
-git branch -d my-feature
+git branch -d my-chapter
 ```
 
 - Optionally, delete the remote branch as well:
 ```bash
-git push origin --delete my-feature
+git push origin --delete my-chapter
 ```
 
 This workflow ensures synchronization and collaboration while contributing to open-source projects.
 
-## Tags and Releases
+## Working with Tags and Releases
 ### 1. Create a Tag
 Tags are used to mark specific points in the commit history, such as releases.
 ```bash
@@ -259,115 +214,130 @@ To create a release on GitHub:
 4. Your releases will be organized in the Releases section under the **Code** tab:
 - ![release_3](/topics/imgs/05/release_3.jpg)
 
----
 
-## Block Main From Directly Push
-To prevent direct pushes to the main branch, you can set up branch protection rules in your Git repository on GitHub or GitLab.
+## Working with Forks and Pull Requests
+Forking a repository allows you to contribute to a project without modifying the original repository directly. It's a way to contribute with Open-Source projects.
 
-1. GitHub: Protect the main Branch
-Go to the repository's Settings tab.
-Select Branches from the sidebar.
-Under Branch protection rules, click Add rule.
-Set the Branch name pattern to main.
-Enable the Require pull request reviews before merging option.
-Optionally, enable other settings like requiring status checks or restricting who can push to the branch.
-Save the changes.
-This will block direct pushes to the main branch and ensure that all changes go through a pull request process.
+### 1. Fork a Repository
+On GitHub  use the web interface to fork the desired repository.
+- ![fork](/topics/imgs/04/fork.png)
+
+### 2. Clone the Forked Repository
+```bash
+git clone https://github.com/lorenzouriel/opentelemetry-python-contrib.git
+```
+- This creates a local copy of your forked repository.
+
+### 3. Add an Upstream Repository to Sync With the Original Project
+```bash
+git remote add upstream https://github.com/open-telemetry/opentelemetry-python-contrib.git
+```
+- The **upstream** repository refers to the original repository from which you forked.
+
+### 4. Sync your Fork With the Original Repository
+Fetch changes from the upstream repository:
+```bash
+git fetch upstream
+```
+
+- Merge updates into your main branch:
+```bash
+git checkout main
+git merge upstream/main
+```
+
+- Push the updates to your fork:
+
+```bash
+git push origin main
+```
+
+### 5. Create a Pull Request
+- On GitHub, **go to the original repository and click "New Pull Request".**
+- Compare changes between your fork and the original repository.
+- Click **Create Pull Request** and add a descriptive message.
+- Once reviewed and approved, the maintainer can merge your contribution.
 
 ## More About the git remote Command
 
 More About the git remote Command
 The git remote command is used to manage remote repositories in Git. It allows you to view, add, and remove remotes in your repository.
 
-1. View the Current Remotes
+### 1. View the Current Remotes
 To list all the remote repositories linked to your local repository, use the following command:
-
-bash
-Copy
-Edit
+```bash
 git remote -v
-This will display the URLs of the remote repositories for fetching and pushing.
+```
+- This will display the URLs of the remote repositories for fetching and pushing.
 
-2. Add a New Remote
+### 2. Add a New Remote
 To add a new remote repository, use the following command:
+```bash
+git remote add repo-name repo-url
+```
 
-bash
-Copy
-Edit
-git remote add <remote-name> <remote-url>
 For example:
+```bash
+git remote add new-origin https://github.com/lorenzouriel/ebook-git-github.git
+```
 
-bash
-Copy
-Edit
-git remote add origin https://github.com/username/repository.git
-3. Remove a Remote
+### 3. Remove a Remote
 To remove an existing remote, use the following command:
+```bash
+git remote remove repo-name
+```
 
-bash
-Copy
-Edit
-git remote remove <remote-name>
 For example, to remove the origin remote:
+```bash
+git remote remove new-origin
+```
 
-bash
-Copy
-Edit
-git remote remove origin
-4. Rename a Remote
+### 4. Rename a Remote
 If you want to rename a remote repository, use:
+```bash
+git remote rename old-repo-name new-repo-name
+```
 
-bash
-Copy
-Edit
-git remote rename <old-name> <new-name>
 For example:
+```bash
+git remote rename new-origin upstream
+```
 
-bash
-Copy
-Edit
-git remote rename origin upstream
-5. Change the URL of a Remote
+### 5. Change the URL of a Remote
 To change the URL of an existing remote:
+```bash
+git remote set-url repo-name repo-new-url
+```
 
-bash
-Copy
-Edit
-git remote set-url <remote-name> <new-url>
 For example:
+```bash
+git remote set-url origin https://github.com/lorenzouriel/ebook-git-github.git
+```
 
-bash
-Copy
-Edit
-git remote set-url origin https://github.com/username/new-repository.git
-6. Show Information About a Remote
+### 6. Show Information About a Remote
 To view detailed information about a remote repository, use:
+```bash
+git remote show repo-name
+```
 
-bash
-Copy
-Edit
-git remote show <remote-name>
 For example:
-
-bash
-Copy
-Edit
+```bash
 git remote show origin
+```
+
 This will display detailed information, including the fetch and push URLs, tracking branches, and more.
 
-7. Fetch from a Remote
+### 7. Fetch from a Remote
 To fetch updates from a remote repository:
+```bash
+git fetch repo-name
+```
 
-bash
-Copy
-Edit
-git fetch <remote-name>
 For example:
-
-bash
-Copy
-Edit
+```bash
 git fetch origin
+```
+
 This retrieves changes from the remote but does not merge them into your current branch.
 
-By mastering the git remote command, you can easily manage remote repositories, set up multiple remotes, and maintain proper synchronization with your team's workflow.
+By mastering the `git remote command`, you can easily manage remote repositories, set up multiple remotes, and maintain proper synchronization with your team's workflow.
