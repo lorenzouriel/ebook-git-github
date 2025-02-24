@@ -37,8 +37,6 @@ What to write in your commit message?
 I know you've had this question, especially when we make several changes and need to specify everything in a single commit.
 
 I follow some practices that I consider good in my projects. They are:
-
-#### Commits
 - `feat: added support for automatic backup`
 - `fix: adjusted data normalization`
 - `revert: reverted change to the bank schema`
@@ -67,7 +65,7 @@ The default I see in the industry for main branches is:
 - `qa` - `test`
 - `main`
 
-#### Change Branches
+#### Change or Feature Branches
 For change and secondary branches always specify the objective and add a descriptive message:
 - `feature/add-backup-automation`
 - `fix/fix-null-values-in-report`
