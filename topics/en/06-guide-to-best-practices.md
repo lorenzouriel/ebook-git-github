@@ -120,5 +120,3 @@ Use post-receive hooks to automate tasks after changes are pushed to a remote re
 - Sending notifications to your team about new updates.
 
 Of course, minimizing errors and creating an automatic initial deployment.
-
-
