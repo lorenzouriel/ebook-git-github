@@ -224,48 +224,189 @@ git show abc1234
 This will display the details of the commit, allowing you to decide if it’s the commit you want to recover.
 
 ## More About `git status`, `git log`, `git show` and `git diff`
-
-Understanding `git status`, `git log`, and `git diff` helps in tracking changes effectively.
+Understanding the commands `git status`, `git log`, `git show`, and `git diff` is crucial for tracking changes and managing your Git repository effectively. These commands provide insights into the current state of your repository, help you explore commit histories, and allow you to see the differences between various states of your files.
 
 ### `git status`
-Shows the current state of the working directory and staging area.
-
-#### Usage:
+`git status` provides an overview of the current state of the working directory and the staging area. It helps you track which changes have been staged, which are not, and which files are untracked.
 ```bash
 git status
 ```
 
-### `git log`
-Displays commit history.
+Example output:
+```bash
+On branch main
+Your branch is up to date with 'origin/main'.
 
-#### Usage:
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        new file:   script.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+```
+- Changes to be committed: These files have been staged and are ready to be committed.
+- Untracked files: These files are not being tracked by Git yet.
+
+### `git log`
+`git log` shows the commit history of the repository, allowing you to explore previous commits, their messages, authors, and timestamps. You can also use various options to filter and format the log output.
 ```bash
 git log
 ```
 
-### `git diff`
-Shows changes between commits, branches, or the working directory.
+Example output:
+```bash
+commit abc1234 (HEAD -> main, origin/main)
+Author: John Doe <johndoe@example.com>
+Date:   Thu Mar 5 14:32:17 2025 -0500
 
-#### Compare working directory with the last commit:
+    Fixed issue with mobile responsiveness
+
+commit def5678
+Author: Jane Smith <janesmith@example.com>
+Date:   Wed Mar 4 11:15:40 2025 -0500
+
+    Added new feature for search
+```
+- Commit hash: The unique identifier for the commit.
+- Author: Who made the commit.
+- Date: When the commit was made.
+- Commit message: A brief description of the changes made in that commit.
+
+You can also use `git log --oneline` for more resumed details:
+```bash
+git log --oneline
+```
+
+Example output:
+```bash
+4134ad2 (HEAD -> dev) Revert "revert"
+56c9845 revert
+3d87987 herge tag 'vv1.0' into dev Showw show
+d207431 (tag: vv1.0, main) Merge branch 'release/v1.0'
+28b146b Yes
+0a91ea2 Updated commit message
+ca382f6 (origin/main) filename3
+db14708 new file
+5a26f39 (tag: v1.0.0) first commit
+```
+
+### `git show`
+`git show` allows you to view detailed information about a specific commit, including the commit message, author, date, and the changes made (diffs).
+```bash
+git show commit-hash
+```
+
+Example output:
+```bash
+commit abc1234 (HEAD -> main, origin/main)
+Author: John Doe <johndoe@example.com>
+Date:   Thu Mar 5 14:32:17 2025 -0500
+
+    Fixed issue with mobile responsiveness
+
+diff --git a/index.html b/index.html
+index 4d5c6f7..d8f9e01 100644
+--- a/index.html
++++ b/index.html
+@@ -1,6 +1,6 @@
+ <html>
+   <head>
+     <title>My Website</title>
+   </head>
+-  <body>
++  <body class="responsive">
+     <h1>Welcome to my website!</h1>
+   </body>
+ </html>
+```
+- This will show the changes made in the commit (the diff) along with other metadata.
+
+### `git diff`
+`git diff` shows the differences between various states of the repository, such as changes between the working directory and the last commit, between two commits, or between branches.
+
+Compare working directory with the last commit:
 ```bash
 git diff
 ```
 
-<!-- ## More About `git commit --amend`
+Example output:
+```bash
+diff --git a/index.html b/index.html
+index 4d5c6f7..d8f9e01 100644
+--- a/index.html
++++ b/index.html
+@@ -1,6 +1,6 @@
+ <html>
+   <head>
+     <title>My Website</title>
+   </head>
+-  <body>
++  <body class="responsive">
+     <h1>Welcome to my website!</h1>
+   </body>
+ </html>
+```
+- This shows the changes between the working directory and the last commit. The `+` sign indicates a line added, and the `-` sign indicates a line removed.
 
-- `git commit --amend` allows modifying the last commit.
-- Useful for correcting messages or adding missed changes.
+#### Compare two commits:
+You can also compare the changes between two commits by specifying their hashes:
+```bash
+git diff commit-hash1 commit-hash2
+```
+- This shows the differences between the two specified commits.
 
-#### Example:
+#### Compare branches:
+To see differences between branches, use:
+```bash
+git diff branch1 branch2
+```
+- This shows the differences between the two branches, helping you see what changes are in one branch but not the other.
+
+## More About `git commit --amend`
+The `git commit --amend` command is used to modify the most recent commit in Git. It allows you to correct the commit message, add or remove changes from the commit, or even update both the changes and the message in one go.
+
+This command is particularly useful when:
+- You realize that the commit message needs to be improved.
+- You forgot to include some changes in the commit.
+
+### Usage:
+```bash
+git commit --amend
+```
+
+By default, running this command will open the commit editor to allow you to modify the commit message. You can also pass the `-m` option to directly update the commit message.
+
+#### Example 1: Modify the Commit Message
+If you want to update the message of the last commit, you can use:
 ```bash
 git commit --amend -m "Updated commit message"
-``` -->
+```
+- This will replace the message of the last commit with the new one.
 
-<!-- ## More About `git archive`
+#### Example 2: Add Missed Changes
+If you realize that you forgot to stage some changes for the last commit, you can:
 
-Used to create compressed archives of a repository.
-
-#### Example:
+1. Stage the changes you missed:
 ```bash
-git archive --format=zip HEAD > repo.zip
-```  -->
+git add <file>
+```
+
+2. Amend the commit with the staged changes:
+```bash
+git commit --amend
+```
+- This will open the commit editor again, where you can modify the commit message if desired. If you don't want to change the message, simply save and close the editor.
+
+The amended commit will now include both the original changes and the newly staged changes.
+
+#### Example 3: Completely Replace the Commit (Message + Changes)
+If you want to both change the commit message and the changes, stage the changes first and then run the `--amend` command:
+```bash
+git add <file>
+git commit --amend -m "New commit message with updated changes"
+```
+- This will replace the last commit with the new changes and the new commit message.
+
+***`git commit --amend`** rewrites the last commit, so it changes its commit hash. This can cause issues if the commit has already been pushed to a shared repository. It's recommended to only amend commits that haven't been pushed yet, or to use it cautiously if you have already shared your changes.*
