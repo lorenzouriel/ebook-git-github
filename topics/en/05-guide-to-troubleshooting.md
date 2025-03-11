@@ -2,8 +2,8 @@
 If something goes wrong, you need to know how to respond, Git isn’t just about the happy path:
 - You work
 - You make a commit
-- Merge Branch
-- Deploy Changes
+- Merge the branch
+- Deploy
 
 We love the happy path, that's why is happy!
 
