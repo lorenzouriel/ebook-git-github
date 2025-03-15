@@ -2,7 +2,7 @@
 
 Without understanding the fundamentals, its history and what it makes up. It doesn't make sense for a man to continue walking the path.
 
-Okay, I didn't need to say that catchphrase. But we'll focus on this chapter as a general introduction to what constitutes Git and GitHub.
+Okay, I didn't need to say that catchphrase. But we'll focus on this chapter as a general introduction to what constitutes Git & GitHub.
 
 ## Introduction to Repositories and Concepts
 
@@ -136,50 +136,50 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 - ![architecture_git](/topics/imgs/02/architecture_git.jpg)
 
 ## Creating a Local and Remote Repo
-**1. Go to your GitHub and create a new repository:**
+1. Go to your GitHub and create a new repository:
 - ![1](/topics/imgs/02/1.png)
 
-**2. Navigate to the local directory where you want to create the repository — use the cd p command to enter the desired directory.**
+2. Navigate to the local directory where you want to create the repository
 ```shell
 cd c:\path\vagrant
 ```
 
-**3. This command creates a file called README.md and inserts the text #up-website-with-vagrant into it. The >> is a redirection operator that appends the text to the end of the file, or creates the file if it doesn't exist.**
+3. This command creates a file called README.md and inserts the text #up-website-with-vagrant into it. The >> is a redirection operator that appends the text to the end of the file, or creates the file if it doesn't exist.
 ```shell
 echo "# up-website-with-vagrant" >> README.md
 ```
 
-**4. Initializes a new Git repository in the current directory.**
+4. Initializes a new Git repository in the current directory.
 ```shell
 git init
 ```
 
-**5. Adds the file README.md to the index. This prepares the file to be included in the next commit.**
+5. Adds the file README.md to the index. This prepares the file to be included in the next commit.
 ```shell
 git add README.md
 ```
 
-**6. Adds all changes (if any)**
+6. Adds all changes (if any)
 ```shell
 git add .
 ```
 
-**7. Creates the first commit in the repository with a message. The -m allows you to add the commit message directly on the command line.**
+7. Creates the first commit in the repository with a message. The `-m` allows you to add the commit message directly on the command line.
 ```shell
 git commit -m "first commit"
 ```
 
-**8. Renames the repository's default branch to main. This command is used to update the main branch name to follow the latest naming practices, replacing the old master**
+8. Renames the repository's default branch to main. This command is used to update the main branch name to follow the latest naming practices, replacing the old master.
 ```shell
 git branch -M main
 ```
 
-**9. Adds a remote repository named "origin". The term "origin" is a standard term used to refer to the main remote repository. The URL is the repository's address on GitHub.**
+9. Adds a remote repository named "origin". The term "origin" is a standard term used to refer to the main remote repository. The URL is the repository's address on GitHub.
 ```shell
 git remote add origin https://github.com/lorenzouriel/up-website-with-vagrant.git
 ```
 
-**10. Pushes the local repository to the remote repository ("origin") on the main branch. The -u establishes a tracking relationship, automatically associating the local branch with the remote branch. This is useful for future git pull and git push without having to specify the branch.**
+10. Pushes the local repository to the remote repository ("origin") on the main branch. The -u establishes a tracking relationship, automatically associating the local branch with the remote branch. This is useful for future git pull and git push without having to specify the branch.
 ```shell
 git push -u origin main
 ```
@@ -269,4 +269,5 @@ This is an **amazing project** that uses _modern technologies_.
 #### Code:
 - To include code blocks, use three backticks before and after the block. You can specify the programming language for syntax highlighting.
 - ![md_code](/topics/imgs/02/md_code.png)
----
+
+So far we understand what makes up Git and how to start your first project, let's delve deeper into what we've seen so far!

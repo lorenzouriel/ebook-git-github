@@ -145,4 +145,6 @@ Now try pushing your changes:
 git push -u origin main
 ```
 
-This should work without asking for your username or password!
+This should work without asking for your username or password.
+
+Now you can start working with Git & GitHub!
