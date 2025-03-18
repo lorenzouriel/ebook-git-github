@@ -191,3 +191,5 @@ git push origin feature-article
 
 ### Diagram 
 ![forking-workflow](/topics/imgs/07-guide-workflow-types/forking-workflow.png)
+
+By learning this, you will be able to decide which workflow best suits you and your team, remembering that in many cases we already use one without even realizing it.

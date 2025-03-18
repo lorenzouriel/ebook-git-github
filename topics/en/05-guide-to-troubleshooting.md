@@ -285,7 +285,7 @@ index 8d1c8b6..91b27f5 100644
 - Display all the details of the commit, allowing you to decide if it’s the commit you want to recover.
 
 ## More About `git status`, `git log`, `git show` and `git diff`
-Yes... it's more because we already use them above.
+Yes... we already use them above.
 
 Understanding the commands `git status`, `git log`, `git show`, and `git diff` can help you track changes and managing your Git repository in a more smart way. 
 

@@ -1,122 +1,122 @@
-# A Guide to Best Practices
+# Um Guia para Boas Práticas
 
-You need to learn some best practices before making your next commit.
+Você precisa aprender algumas práticas recomendadas antes de fazer seu próximo commit.
 
-What is the best type of message? Or the best name for the branches?
+Qual é o melhor tipo de mensagem? Ou o melhor nome para os branches?
 
-We always seek to apply best practices in our projects. If you don't already do this, it's time to start.
+Sempre buscamos aplicar as melhores práticas em nossos projetos. Se você ainda não faz isso, é hora de começar.
 
-Even more so when we work as a team, share repositories and have code reviews.
+Ainda mais quando trabalhamos em equipe, compartilhamos repositórios e fazemos revisões de código.
 
-You know that commit that broke all the code and the message only said: "Now go!"? Well, that's what I'm talking about.
+Sabe aquele commit que quebrou todo o código e a mensagem só dizia: "Agora vai!"? Pois é disso que estou falando.
 
-So what to do?
+Então o que fazer?
 
-What are the best practices when it comes to Git & GitHub?
+Quais são as melhores práticas quando se trata de Git e GitHub?
 
-## Clear and Frequent Commits
+## Commits Claros e Frequentes
 
-With sure the most important and the first of the list: Write in a manner that people can understand!
+Com certeza o mais importante e o primeiro da lista: Escreva de uma forma que as pessoas possam entender!
 
-Make small and frequent commits to maintain a clear change history.
+Faça commits pequenos e frequentes para manter um histórico de alterações claro.
 
-Use descriptive and standardized commit messages explaining what was changed and why.
+Use mensagens de commit descritivas e padronizadas explicando o que foi alterado e o porquê.
 
-**Example:** 
+**Exemplo:**
 ```bash
 git commit -m "fix: login issue by correcting password validation"
 ```
 
-Avoid generic commits like only "fix" or "update." Prefer something with more details.
+Evite commits genéricos como apenas "fix" ou "update". Prefira algo com mais detalhes.
 
-Make small commits, where each one addresses a single change. Stop making commits and writing a whole text explaining what changed, this is terrible when we need to revert.
+Faça commits pequenos, onde cada um aborda uma única alteração. Pare de fazer commits e escrever um texto inteiro explicando o que mudou, isso é péssimo quando precisamos reverter.
 
-### Tips for Commits Messages
-What to write in your commit message?
+### Dicas para Mensagens de Commits
+O que escrever na sua mensagem de commit?
 
-I know you've had this question, especially when we make several changes and need to specify everything in a single commit.
+Eu sei que você já teve essa dúvida, principalmente quando fazemos várias alterações e precisamos especificar tudo em um único commit.
 
-I follow some practices that I consider good in my projects. They are:
-- `feat: added support for automatic backup`
-- `fix: adjusted data normalization`
-- `revert: reverted change to the bank schema`
-- `delete: removed table [old_logs]`
-- `update: updated database structure`
-- `config: adjusted database connection in .env`
-- `ci: added migration step in the pipeline`
-- `docs: documented table structure`
-- `test: added tests for ETL functions`
+Eu sigo algumas práticas que considero boas nos meus projetos. Eles são:
+- `feat: adicionado suporte para backup automático`
+- `fix: ajustado normalização de dados`
+- `revert: revertida alteração no esquema do banco`
+- `delete: removida tabela [old_logs]`
+- `update: atualizada estrutura do banco de dados`
+- `config: ajustada conexão do banco de dados em .env`
+- `ci: adicionada etapa de migração no pipeline`
+- `docs: documentada estrutura da tabela`
+- `test: adicionados testes para funções ETL`
 
-The idea is to put at the beginning a description of what the commit is about, followed by a clear detail of what was accomplished.
+A ideia é colocar no início uma descrição do que é o commit, seguido por um detalhe claro do que foi realizado.
 
-Frequent commits are always better! Don't wait to do everything at once.
+Commits frequentes são sempre melhores! Não espere para fazer tudo de uma vez.
 
-## Branch Management
-Use branches to manage feature development, deploys, releases and other tasks. Adopt a workflow that is good for your team, such as:
-- **Git Flow:** The most common and most popular way to work, divided by principal branches (`dev`, `main`) and secondary (`feature`, `release`, `hotfix`).
-- **Trunk-Based Development:** The project is centralized in only one unique branch for all team, the `main` and we have the concept of `feature-branchs` for changes.
+## Gerenciamento de Branch
+Use branches para gerenciar o desenvolvimento de recursos, implantações, lançamentos e outras tarefas. Adote um fluxo de trabalho que seja bom para sua equipe, como:
+- **Git Flow:** A maneira mais comum e popular de trabalhar, dividida por branches principais (`dev`, `main`) e secundários (`feature`, `release`, `hotfix`).
+- **Trunk-Based Development:** O projeto é centralizado em apenas um branch exclusivo para toda a equipe, o `main` e temos o conceito de `feature-branchs` para alterações.
 
-### Tips for Branches Names
-And we always find ourselves with the same question, which title to put in this branch?
+### Dicas para nomes de branches
+E sempre nos encontramos com a mesma pergunta, qual título colocar neste branch?
 
-#### Main Branches
-The default I see in the industry for main branches is:
+#### Branches principais
+O padrão que vejo na indústria para as branches principais é:
 - `dev` - `development`
 - `qa` - `test`
 - `main`
 
-#### Change or Feature Branches
-For change and secondary branches always specify the objective and add a descriptive message:
+#### Branches de alteração
+Para branches de alterações, sempre especifique o objetivo e adicione uma mensagem descritiva:
 - `feature/add-backup-automation`
 - `fix/fix-null-values-in-report`
 - `hotfix/fix-production-database-issue`
 - `refactor/normalize-user-table`
 - `release/1.0.0`
 
-A good tip is relate the task id and the task title, if your backlog supports:
+Uma boa dica é relacionar o ID da tarefa e o título da tarefa, se seu backlog suportar:
 - `feature/task544-add-backup-automation`
 - `fix/task17-fix-null-values-in-report`
 
 ### Rebase
-Another good tip when working with branches is the `git rebase` command. You can reorder or edit commits before merging. This helps maintain a linear and readable history:
+Outra boa dica ao trabalhar com branches é o comando `git rebase`. Você pode reordenar ou editar commits antes de mesclar. Isso ajuda a manter um histórico linear e legível:
 ```bash
-git rebase -i HEAD~3  # Reorder or edit the last three commits interactively
+git rebase -i HEAD~3 # Reordene ou edite os últimos três commits interativamente
 ```
 
-*Avoid rebasing shared branches like `main` or `dev` to prevent conflicts and confusion for others.*
+*Evite rebasear branches compartilhados como `main` ou `dev` para evitar conflitos e confusão para os outros.*
 
 ### Delete
-Regularly delete old or outdated branches to keep the repository clean:
+Exclua regularmente branches antigos ou desatualizados para manter o repositório limpo:
 
 ```bash
-git branch -d feature/task544-add-backup-automation  # Delete a merged branch
-git branch -D feature/task544-add-backup-automation  # Force delete an unmerged branch
+git branch -d feature/task544-add-backup-automation # Exclua um branch mesclado
+git branch -D feature/task544-add-backup-automation # Exclua um branch não mesclado à força
 ```
 
 ## Use .gitignore
-Always configure an appropriate `.gitignore` file for your project to avoid versioning unnecessary files.
+Sempre configure um arquivo `.gitignore` apropriado para seu projeto para evitar versionamento de arquivos desnecessários.
 
-Exclude build files, dependencies, credentials and every possible environment configurations.
+Exclua arquivos de build, dependências, credenciais e todas as configurações de ambiente possíveis.
 
-I recommend you to use the [toptal site](https://www.toptal.com/developers/gitignore), he generates the most complete `.gitignore` files for every language. This is a [python example generated with toptal.](https://www.toptal.com/developers/gitignore/api/python)
+Recomendo que você use o [site toptal](https://www.toptal.com/developers/gitignore), ele gera os arquivos `.gitignore` mais completos para cada linguagem. Este é um [exemplo python gerado com toptal.](https://www.toptal.com/developers/gitignore/api/python)
 
-You can also check the ready-made templates made by github in [github/gitignore repository](https://github.com/github/gitignore).
+Você também pode verificar os modelos prontos feitos pelo github no [repositório github/gitignore](https://github.com/github/gitignore).
 
 ## Git Hooks
-With Git Hooks you can automate rules and standards that need to be applied at various stages of your workflow. 
+Com Git Hooks você pode automatizar regras e padrões que precisam ser aplicados em vários estágios do seu fluxo de trabalho.
 
 ### Pre-commit Hooks
-Use pre-commit hooks to run automated checks before changes are committed. These hooks can enforce code your pre-defined quality standards, some examples:
-- Running linters to catch syntax errors or style.
-- Executing unit tests to ensure changes don’t break the code.
-- Validating commit messages to follow a consistent format.
+Use pre-commit hooks para executar verificações automatizadas antes que as alterações sejam confirmadas. Esses hooks podem impor ao código seus padrões de qualidade predefinidos, alguns exemplos:
+- Executar linters para capturar erros de sintaxe ou estilo.
+- Executar testes de unidade para garantir que as alterações não quebrem o código.
+- Validar mensagens de confirmação para seguir um formato consistente.
 
-Here you can detect errors early and prevent the developer from submitting any code that could affect the main project.
+Aqui você pode detectar erros antecipadamente e impedir que o desenvolvedor envie qualquer código que possa afetar o projeto principal.
 
 ### Post-receive Hooks
-Use post-receive hooks to automate tasks after changes are pushed to a remote repository. These hooks are ideal for:
-- Updating staging or production environments automatically.
-- Triggering CI/CD pipelines to deploy or test changes.
-- Sending notifications to your team about new updates.
+Use post-receive hooks para automatizar tarefas após as alterações serem enviadas para um repositório remoto. Esses hooks são ideais para:
+- Atualizar ambientes de preparação ou produção automaticamente.
+- Acionar pipelines de CI/CD para implantar ou testar alterações.
+- Enviar notificações para sua equipe sobre novas atualizações.
 
-Of course, minimizing errors and creating an automatic initial deployment.
+Claro, minimizando erros e criando uma implantação inicial de forma automática.

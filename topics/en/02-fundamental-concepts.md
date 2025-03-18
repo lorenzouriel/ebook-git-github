@@ -222,7 +222,8 @@ Created by John Gruber and Aaron Swartz in 2004, its goal is to be readable in p
 ```
 
 #### Lists:
-- Markdown supports both ordered and unordered lists. ```md
+- Markdown supports both ordered and unordered lists. 
+```md
 - Item 1
 - Item 2
 - Subitem 2.1
@@ -242,12 +243,13 @@ Created by John Gruber and Aaron Swartz in 2004, its goal is to be readable in p
 
 #### Images:
 - Images are inserted similarly to links, but with an exclamation point `!` before them.
-``md
+```md
 ![Project Logo](images/logo.png)
 ```
 
 #### Emphasis (bold and italics):
-- To create emphasis in text, you can use asterisks or underscores. ```md
+- To create emphasis in text, you can use asterisks or underscores. 
+```md
 This is an **amazing project** that uses _modern technologies_.
 ```
 

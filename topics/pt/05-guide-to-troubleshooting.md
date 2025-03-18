@@ -1,42 +1,47 @@
-# A Guide to Troubleshooting
-If something goes wrong, you need to know how to respond, Git isn’t just about the happy path:
-- You work
-- You make a commit
-- Merge the branch
-- Deploy
+# Um Guia para Solução de Problemas
+Se algo der errado, você precisa saber como responder, o Git não é apenas sobre o caminho feliz:
+- Você trabalha
+- Você faz um commit
+- Mescla o branch
+- Faz o deploy
 
-We love the happy path, that's why is happy!
+Nós amamos o caminho feliz, é por isso que é feliz!
 
-But more often than not, things don’t go as planned and we need to know how to react in that cases.
+Mas, na maioria das vezes, as coisas não saem como planejado e precisamos saber como reagir nesses casos.
 
-How do you recover lost changes? How do you revert mistakes?
+Como você recupera alterações perdidas? Como você reverte erros?
 
-This isn’t just about Git, it applies to every project.
+Isso não é apenas sobre o Git, se aplica a todos os projetos.
 
-That’s exactly what I’ll cover in this chapter.
+É exatamente isso que abordarei neste capítulo.
 
-## Undoing Commits (git revert, git reset, git checkout)
-When working with Git, you may need to undo commits for some reasons, such as fixing errors, reverting unexpected changes, or cleaning up history. 
+## Desfazendo Commits (`git revert`, `git reset`, `git checkout`)
 
-Git provides three main commands for undoing commits: `git revert`, `git reset` and `git checkout`. Each has a different behavior and should be used accordingly.
+Ao trabalhar com Git, pode ser necessário desfazer commits por alguns motivos, como corrigir erros, reverter alterações inesperadas ou limpar o histórico.
+
+O Git fornece três comandos principais para desfazer commits: `git revert`, `git reset` e `git checkout`. Cada um tem um comportamento diferente e deve ser usado de acordo.
 
 ## git revert
-`git revert` creates a new commit that undoes the changes introduced by a specific commit without modifying the repository history. 
 
-This is useful when you want to keep the history clean and not remove commits.
+`git revert` cria um novo commit que desfaz as alterações introduzidas por um commit específico sem modificar o histórico do repositório.
 
-### Usage:
+Isso é útil quando você deseja manter o histórico limpo e não remover commits.
+
+### Uso:
+
 ```bash
-git revert commit-hash
+git revert hash-do-commit
 ```
 
-### Example:
-#### 1. Check the commit you want to revert:
-```bash
-git log --oneline 
+### Exemplo:
 
-# Return
-PS C:\ebooks\git-github-ebook-test> git log --oneline 
+#### 1. Verifique o commit que você deseja reverter:
+
+```bash
+git log --oneline
+
+# Retorno
+PS C:\ebooks\git-github-ebook-test> git log --oneline
 56c9845 revert
 3d87987 herge tag 'v1.0' into dev Showw show
 d207431 (tag: v1.0, main) Merge branch 'release/v1.0'
@@ -45,15 +50,16 @@ d207431 (tag: v1.0, main) Merge branch 'release/v1.0'
 ca382f6 (origin/main) filename3
 db14708 new file
 5a26f39 (tag: v1.0.0) first commit
-PS C:\ebooks\git-github-ebook-test> 
+PS C:\ebooks\git-github-ebook-test>
 ```
 
-#### 2. Copy the hash and run `git revert`:
+#### 2. Copie o hash e execute `git revert`:
+
 ```bash
 git revert 56c9845
 
-# Return
-PS C:\ebooks\git-github-ebook-test> git log --oneline 
+# Retorno
+PS C:\ebooks\git-github-ebook-test> git log --oneline
 4134ad2 (HEAD -> dev) Revert "revert"
 56c9845 revert
 3d87987 herge tag 'v1.0' into dev Showw show
@@ -63,87 +69,105 @@ d207431 (tag: v1.0, main) Merge branch 'release/v1.0'
 ca382f6 (origin/main) filename3
 db14708 new file
 5a26f39 (tag: v1.0.0) first commit
-PS C:\ebooks\git-github-ebook-test> 
+PS C:\ebooks\git-github-ebook-test>
 ```
-- This creates a new commit that reverts the changes from commit `56c9845`.
 
+- Isso cria um novo commit que reverte as alterações do commit `56c9845`.
 
 ## `git reset`
 
-`git reset` moves the HEAD pointer to a previous commit, this is used for modifying commit history. It has three main modes:
+`git reset` move o ponteiro HEAD para um commit anterior; isso é usado para modificar o histórico de commits. Ele tem três modos principais:
 
-### Modes of `git reset`:
+### Modos de `git reset`:
 
-- **Soft (`--soft`)**: Resets the HEAD to a previous commit but keeps the changes in the staging area, allowing you to modify or amend the commit.
-- **Mixed (`--mixed`)**: Resets the HEAD to a previous commit and removes the changes from the staging area, but leaves the changes in the working directory.
-- **Hard (`--hard`)**: Completely removes the commit and all changes, both from the staging area and the working directory.
+- **Soft (`--soft`)**: Redefine o HEAD para um commit anterior, mas mantém as alterações na área de staging, permitindo que você modifique ou emende o commit.
+- **Mixed (`--mixed`)**: Redefine o HEAD para um commit anterior e remove as alterações da área de staging, mas deixa as alterações no diretório de trabalho.
+- **Hard (`--hard`)**: Remove completamente o commit e todas as alterações, tanto da área de staging quanto do diretório de trabalho.
 
-### `--soft` Example:
-The `--soft` option undoes the last commit, but keeps the changes in the staging area, so you can easily modify the commit or change the commit message. This is useful if you want to redo a commit without losing the work you've done.
+### Exemplo `--soft`:
 
-You go back to the `git add .` step.
+A opção `--soft` desfaz o último commit, mas mantém as alterações na área de staging, para que você possa modificar facilmente o commit ou alterar a mensagem do commit. Isso é útil se você deseja refazer um commit sem perder o trabalho que fez.
+
+Você volta para a etapa `git add .`.
+
 ```bash
-git reset --soft HEAD~1 
+git reset --soft HEAD~1
 ```
-- In this example, `HEAD~1` moves the HEAD back by one commit, all the changes remain staged, so you can re-commit them after making adjustments.
 
+- Neste exemplo, `HEAD~1` move o HEAD um commit para trás; todas as alterações permanecem em stage, para que você possa re-commitá-las após fazer ajustes.
 
-### `--mixed` Example:
-The `--mixed` option resets HEAD to the specified commit, removes the changes from the staging area, but leaves them in the working directory. This is the default behavior of `git reset` if no mode is specified.
+### Exemplo `--mixed`:
 
-It is similar to `--soft`, the main difference is that with `--mixed` you go back before `git add .`.
+A opção `--mixed` redefine o HEAD para o commit especificado, remove as alterações da área de staging, mas as deixa no diretório de trabalho. Este é o comportamento padrão de `git reset` se nenhum modo for especificado.
+
+É semelhante a `--soft`; a principal diferença é que com `--mixed` você volta antes de `git add .`.
+
 ```bash
 git reset --mixed HEAD~1
 ```
-- This command undoes the last commit and unstages the changes, but the changes remain in your working directory, so you can still modify them.
 
-### `--hard` Example:
-The `--hard` option resets both the staging area and the working directory to match the specified commit. This means all changes are lost and cannot be recovered unless you have backups or use `git reflog`.
+- Este comando desfaz o último commit e remove as alterações do stage, mas as alterações permanecem no seu diretório de trabalho, para que você ainda possa modificá-las.
 
-Destructive action, caution here!
+### Exemplo `--hard`:
+
+A opção `--hard` redefine tanto a área de staging quanto o diretório de trabalho para corresponder ao commit especificado. Isso significa que todas as alterações são perdidas e não podem ser recuperadas, a menos que você tenha backups ou use `git reflog`.
+
+Ação destrutiva, cuidado aqui!
+
 ```bash
 git reset --hard HEAD~1
 ```
-- This will remove the last commit and all the changes associated with it, both in the staging area and the working directory.
 
+- Isso removerá o último commit e todas as alterações associadas a ele, tanto na área de staging quanto no diretório de trabalho.
 
 ## `git checkout`
 
-`git checkout` can be used to undo changes in individual files or switch branches. We've talked about him only for branches since now.
+`git checkout` pode ser usado para desfazer alterações em arquivos individuais ou trocar de branch. Falamos sobre ele apenas para branches até agora.
 
-`git checkout` is also used for undoing commits, but now `git switch` and `git restore` are recommended for these tasks.
+`git checkout` também é usado para desfazer commits, mas agora `git switch` e `git restore` são recomendados para essas tarefas.
 
-### Usage to restore specific files:
-`git checkout` can be used to undo changes in individual files and restore them to the last committed state.
+### Uso para restaurar arquivos específicos:
+
+`git checkout` pode ser usado para desfazer alterações em arquivos individuais e restaurá-los ao último estado commitado.
+
 ```bash
-git checkout -- filename.txt
+git checkout -- nome_do_arquivo.txt
 ```
-- This command will discard any uncommitted changes in the `filename.txt` file and restore it to its last committed state.
 
-The `--` is used to tell Git that you're referring to a file (not a branch) and you want to discard changes in the working directory, restoring the file to the state of the last commit.
+- Este comando descartará quaisquer alterações não commitadas no arquivo `nome_do_arquivo.txt` e o restaurará ao seu último estado commitado.
 
-### `git restore` Example:
-`git restore` is the recommended command for restoring files, and it's more intuitive than using `git checkout` for this purpose.
+O `--` é usado para informar ao Git que você está se referindo a um arquivo (não a uma branch) e que deseja descartar as alterações no diretório de trabalho, restaurando o arquivo ao estado do último commit.
+
+### Exemplo `git restore`:
+
+`git restore` é o comando recomendado para restaurar arquivos, e é mais intuitivo do que usar `git checkout` para esse propósito.
+
 ```bash
-git restore filename.txt
+git restore nome_do_arquivo.txt
 ```
-- This command will discard any uncommitted changes in the `filename.txt` file and restore it to the version from the last commit, just like `git checkout -- filename.txt`.
 
-## Recovering Lost Commits
-If you accidentally lose a commit in Git, you can recover it using commands like `git reflog` and `git fsck`. These tools help you identify and restore commits that seem to have been lost.
+- Este comando descartará quaisquer alterações não commitadas no arquivo `nome_do_arquivo.txt` e o restaurará à versão do último commit, assim como `git checkout -- nome_do_arquivo.txt`.
 
-With sure, it's a type of command that you didn't use a lot, but you need to know that exists.
+## Recuperando Commits Perdidos
 
-### Recovering a Lost Commit with `git reflog`
-`git reflog` records updates to the tip of branches (HEAD), allowing you to see the history of commits and other Git actions, even if the commit is no longer part of any branch or reference.
+Se você perder acidentalmente um commit no Git, poderá recuperá-lo usando comandos como `git reflog` e `git fsck`. Essas ferramentas ajudam você a identificar e restaurar commits que parecem ter sido perdidos.
 
-#### 1. View the recent HEAD changes:
+Com certeza, é um tipo de comando que você não usa muito, mas precisa saber que existe.
+
+### Recuperando um Commit Perdido com `git reflog`
+
+`git reflog` registra atualizações na ponta das branches (HEAD), permitindo que você veja o histórico de commits e outras ações do Git, mesmo que o commit não faça mais parte de nenhuma branch ou referência.
+
+#### 1. Visualize as mudanças recentes do HEAD:
+
 ```bash
 git reflog
 ```
-- This command will display a list of recent changes to the HEAD, including commits, merges, rebases, and resets.
 
-#### 2. Identify the commit hash of the lost commit.
+- Este comando exibirá uma lista de mudanças recentes no HEAD, incluindo commits, merges, rebases e resets.
+
+#### 2. Identifique o hash do commit perdido.
+
 ```bash
 PS C:\ebooks\git-github-ebook-test> git reflog
 4134ad2 (HEAD -> dev) HEAD@{0}: reset: moving to HEAD~1
@@ -162,28 +186,35 @@ ca382f6 (origin/main) HEAD@{10}: checkout: moving from release/v1.0 to main
 28b146b HEAD@{13}: checkout: moving from dev to feature/feature-article
 28b146b HEAD@{14}: reset: moving to HEAD
 ```
-- Look through the output to find the commit you need to recover. Each entry is associated with a reference, such as `HEAD@{2}`, and a commit hash.
 
-#### 3. Checkout or reset to the lost commit:
-Once you've identified the commit hash, you can either checkout or reset to that commit.
+- Examine a saída para encontrar o commit que você precisa recuperar. Cada entrada está associada a uma referência, como `HEAD@{2}`, e um hash de commit.
 
-- **Using `git checkout`:** This will move your HEAD to the specific commit, but it doesn't modify your working directory or staging area.
+#### 3. Faça checkout ou reset para o commit perdido:
+
+Depois de identificar o hash do commit, você pode fazer checkout ou reset para esse commit.
+
+- **Usando `git checkout`:** Isso moverá seu HEAD para o commit específico, mas não modificará seu diretório de trabalho ou área de staging.
+
 ```bash
-git checkout commit-hash
+git checkout hash-do-commit
 ```
 
-- **Using `git reset --hard`:** This will reset your HEAD and working directory to the specific commit, discarding any uncommitted changes.
+- **Usando `git reset --hard`:** Isso redefinirá seu HEAD e diretório de trabalho para o commit específico, descartando quaisquer alterações não commitadas.
+
 ```bash
-git reset --hard commit-hash
+git reset --hard hash-do-commit
 ```
 
-### Example:
-View the reflog to find the lost commit:
+### Exemplo:
+
+Visualize o reflog para encontrar o commit perdido:
+
 ```bash
 git reflog
 ```
 
-Output example:
+Exemplo de saída:
+
 ```bash
 8b3dac5 (HEAD, dev) HEAD@{2}: commit: git checkout
 4134ad2 HEAD@{3}: reset: moving to HEAD~1
@@ -195,17 +226,20 @@ bed2cc3 HEAD@{6}: commit: git reset example
 3d87987 HEAD@{9}: merge vv1.0: Merge made by the 'ort' strategy.
 ```
 
-Recover the commit by checking it out:
+Recupere o commit fazendo checkout dele:
+
 ```bash
 git checkout 73ac997
 ```
 
-Or, if you want to reset your branch to this commit, use:
+Ou, se você quiser redefinir sua branch para este commit, use:
+
 ```bash
-git reset --hard 56c9845 
+git reset --hard 56c9845
 ```
 
-If you run `git reflog` again you will see that all the changes are made as a new commit:
+Se você executar `git reflog` novamente, verá que todas as alterações são feitas como um novo commit:
+
 ```bash
 56c9845 (HEAD) HEAD@{0}: reset: moving to 56c9845
 8b3dac5 (dev) HEAD@{1}: reset: moving to 8b3dac5
@@ -219,30 +253,37 @@ bed2cc3 HEAD@{7}: commit: git reset example
 56c9845 (HEAD) HEAD@{9}: commit: revert
 ```
 
-### Finding Dangling Commits with `git fsck`
-If you can't find the commit in the reflog, it might be "dangling" meaning it’s not referenced by any branch or tag but still exists in Git's database. You can search for these dangling commits using `git fsck`.
+### Encontrando Commits Pendurados com `git fsck`
+Se você não conseguir encontrar o commit no reflog, ele pode estar "pendurado", o que significa que não é referenciado por nenhuma branch ou tag, mas ainda existe no banco de dados do Git. Você pode procurar por esses commits pendurados usando `git fsck`.
 
-Imagine that exists a lost commit in the repository, you can find with the command `git fsck`. The lost commits could happen when we forgot to merge branches and delete the work.
+Imagine que exista um commit perdido no repositório, você pode encontrar com o comando `git fsck`. Os commits perdidos podem acontecer quando esquecemos de fazer merge de branches e deletamos o trabalho.
 
-#### 1. Run `git fsck` to find dangling commits:
-```bash
-git fsck --lost-found
-```
-- This will list objects that are not part of any references, including dangling commits.
+#### 1. Execute `git fsck` para encontrar commits pendurados:
 
-#### 2. Inspect the commits:
-Look for entries labeled "dangling commit" in the output, and use `git show` to inspect them.
-```bash
-git show commit-hash
-```
-
-### Example:
-Find dangling commits with `git fsck`:
 ```bash
 git fsck --lost-found
 ```
 
-Example output:
+- Isso listará objetos que não fazem parte de nenhuma referência, incluindo commits pendurados.
+
+#### 2. Inspecione os commits:
+
+Procure por entradas rotuladas como "dangling commit" na saída e use `git show` para inspecioná-las.
+
+```bash
+git show hash-do-commit
+```
+
+### Exemplo:
+
+Encontre commits pendurados com `git fsck`:
+
+```bash
+git fsck --lost-found
+```
+
+Exemplo de saída:
+
 ```bash
 dangling commit 047885dbe5a76825fa1780cecb741f76eeb9ec35
 dangling commit 18baee9d1b898ee1d82504174672b80d63aafa9a
@@ -260,15 +301,17 @@ dangling commit c8a104a4a311e3ee8cc2a696aeae5e4dc46cbeea
 dangling commit fcde575ac34212c1187cee90604d35f0f6b00202
 ```
 
-Inspect the dangling commit:
+Inspecione o commit pendurado:
+
 ```bash
 git show 047885dbe5a76825fa1780cecb741f76eeb9ec35
 ```
 
-The return:
+O retorno:
+
 ```bash
 commit 047885dbe5a76825fa1780cecb741f76eeb9ec35
-Author: Lorenzo Uriel <lorenzouriel394@gmail.com>
+Author: Lorenzo Uriel 
 Date:   Sun Feb 16 21:01:01 2025 -0300
 
     Updated commit message
@@ -282,81 +325,88 @@ index 8d1c8b6..91b27f5 100644
 +Lorenzo Uriel
 \ No newline at end of file
 ```
-- Display all the details of the commit, allowing you to decide if it’s the commit you want to recover.
 
-## More About `git status`, `git log`, `git show` and `git diff`
-Yes... it's more because we already use them above.
+- Exibe todos os detalhes do commit, permitindo que você decida se é o commit que deseja recuperar.
 
-Understanding the commands `git status`, `git log`, `git show`, and `git diff` can help you track changes and managing your Git repository in a more smart way. 
+## Mais Sobre `git status`, `git log`, `git show` e `git diff`
+Sim... nós já os usamos acima.
 
-With these commands you can check the current state of your repository, help you explore commit histories, and allow you to see the differences between various states of your files.
+Compreender os comandos `git status`, `git log`, `git show` e `git diff` pode ajudá-lo a rastrear as alterações e gerenciar seu repositório Git de uma forma mais inteligente.
 
-It's like a bunch of query statements.
+Com esses comandos, você pode verificar o estado atual do seu repositório, ajudá-lo a explorar os históricos de commit e permitir que você veja as diferenças entre vários estados de seus arquivos.
+
+É como um monte de instruções de consulta.
 
 ### `git status`
-`git status` provides an overview of the current state of the working directory and the staging area. It helps you track which changes have been staged, which are not, and which files are untracked.
+`git status` fornece uma visão geral do estado atual do diretório de trabalho e da área de staging. Ele ajuda você a rastrear quais alterações foram adicionadas ao stage, quais não foram e quais arquivos não estão sendo rastreados.
+
 ```bash
 git status
 ```
 
-Example output:
+Exemplo de saída:
+
 ```bash
 HEAD detached from 73ac997
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
+  (use "git add ..." to update what will be committed)
+  (use "git restore ..." to discard changes in working directory)
         modified:   README.md
         modified:   filename.txt
         modified:   filename2.txt
         modified:   filename3.txt
 
 Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+  (use "git add ..." to include in what will be committed)
         filename3 copy.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-- Changes to be committed: These files have been staged and are ready to be committed.
-- Untracked files: These files are not being tracked by Git yet.
+
+- Changes to be committed: Esses arquivos foram adicionados ao stage e estão prontos para serem commitados.
+- Untracked files: Esses arquivos ainda não estão sendo rastreados pelo Git.
 
 ### `git log`
-`git log` shows the commit history of the repository, allowing you to explore previous commits, their messages, authors, and timestamps. You can also use various options to filter and format the log output.
+`git log` mostra o histórico de commits do repositório, permitindo que você explore commits anteriores, suas mensagens, autores e timestamps. Você também pode usar várias opções para filtrar e formatar a saída do log.
+
 ```bash
 git log
 ```
 
-Example output:
+Exemplo de saída:
 ```bash
 commit 71333c330b93ffe20e02e6bac2b9a57ce15e355c (HEAD)
-Author: Lorenzo Uriel <lorenzouriel394@gmail.com>
+Author: Lorenzo Uriel 
 Date:   Mon Mar 10 21:56:23 2025 -0300
 
     oh yeah
 
 commit 56c9845e9e0ff4298def3b693456f8857d82824b
-Author: Lorenzo Uriel <lorenzouriel394@gmail.com>
+Author: Lorenzo Uriel 
 Date:   Sun Mar 9 21:33:00 2025 -0300
 
     revert
 
 commit 3d87987f33e66c859aa25f6a950995815c8caf50
 Merge: 28b146b d207431
-Author: Lorenzo Uriel <lorenzouriel394@gmail.com>
+Author: Lorenzo Uriel 
 Date:   Wed Mar 5 23:14:00 2025 -0300
 
     show
 ```
-- Commit hash: The unique identifier for the commit.
-- Author: Who made the commit.
-- Date: When the commit was made.
-- Commit message: A brief description of the changes made in that commit.
 
-You can also use `git log --oneline` for more resumed details:
+- Commit hash: O identificador exclusivo para o commit.
+- Author: Quem fez o commit.
+- Date: Quando o commit foi feito.
+- Commit message: Uma breve descrição das alterações feitas nesse commit.
+
+Você também pode usar `git log --oneline` para detalhes mais resumidos:
+
 ```bash
 git log --oneline
 ```
 
-Example output:
+Exemplo de saída:
 ```bash
 5b07142 (HEAD) html example for git show
 71333c3 oh yeah
@@ -371,17 +421,18 @@ db14708 new file
 ```
 
 ### `git show`
-`git show` allows you to view detailed information about a specific commit, including the commit message, author, date, and the changes made.
+`git show` permite que você veja informações detalhadas sobre um commit específico, incluindo a mensagem do commit, autor, data e as alterações feitas.
 
-It was the command we use in the topic above.
+Foi o comando que usamos no tópico acima.
+
 ```bash
 git show 5b07142
 ```
 
-Example output:
+Exemplo de saída:
 ```bash
 commit 5b071427e8369b85a56a5ee6b5388a2e2586306c (HEAD)
-Author: Lorenzo Uriel <lorenzouriel394@gmail.com>
+Author: Lorenzo Uriel 
 Date:   Mon Mar 10 22:02:09 2025 -0300
 
     html example for git show
@@ -405,66 +456,75 @@ index 8d1c8b6..8ebae4c 100644
 \ No newline at end of file
 diff --git a/filename2.txt b/filename2.txt
 ```
-- This will show the changes made in the commit (the diff) along with other metadata.
+
+- Isso mostrará as alterações feitas no commit (o diff) junto com outros metadados.
 
 ### `git diff`
-`git diff` shows the differences between various states of the repository, such as changes between the working directory and the last commit, between two commits, or between branches.
+`git diff` mostra as diferenças entre vários estados do repositório, como alterações entre o diretório de trabalho e o último commit, entre dois commits ou entre branches.
 
-Compare working directory with the last commit:
+Compare o diretório de trabalho com o último commit:
+
 ```bash
 git diff
 ```
 
-Example output:
+Exemplo de saída:
 ```bash
 diff --git a/index.html b/index.html
 index 64b907a..a24d290 100644
 --- a/index.html
 +++ b/index.html
 @@ -3,7 +3,7 @@
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
--    <title>My First HTML Page</title>
-+    <title>My Second HTML Page</title>
- </head>
- <body>
-     <h1>Welcome to My First HTML Page</h1>
+ 
+     
+     
+-    My First HTML Page
++    My Second HTML Page
+ 
+ 
+     Welcome to My First HTML Page
 ```
-- This shows the changes between the working directory and the last commit. The `+` sign indicates a line added, and the `-` sign indicates a line removed.
 
-#### Compare two commits:
-You can also compare the changes between two commits by specifying their hashes:
+- Isso mostra as alterações entre o diretório de trabalho e o último commit. O sinal `+` indica uma linha adicionada e o sinal `-` indica uma linha removida.
+
+#### Comparar dois commits:
+Você também pode comparar as alterações entre dois commits especificando seus hashes:
+
 ```bash
 git diff 5b07142 e0f5e31
 ```
-- This shows the differences between the two specified commits.
 
-Example output:
+- Isso mostra as diferenças entre os dois commits especificados.
+
+Exemplo de saída:
+
 ```bash
 diff --git a/index.html b/index.html
 index a24d290..685af61 100644
 --- a/index.html
 +++ b/index.html
 @@ -3,7 +3,7 @@
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
--    <title>My Second HTML Page</title>
-+    <title>My Third Example HTML Page</title>
- </head>
- <body>
-     <h1>Welcome to My First HTML Page</h1>
+ 
+     
+     
+-    My Second HTML Page
++    My Third Example HTML Page
+ 
+ 
+     Welcome to My First HTML Page
 ```
 
-#### Compare branches:
-To see differences between branches, use:
+#### Comparar branches:
+Para ver as diferenças entre branches, use:
+
 ```bash
 git diff main dev
 ```
-- This shows the differences between the two branches, helping you see what changes are in one branch but not the other.
 
-Example output:
+- Isso mostra as diferenças entre as duas branches, ajudando você a ver quais alterações estão em uma branch, mas não na outra.
+
+Exemplo de saída:
+
 ```bash
 diff --git a/README.md b/README.md
 index f3e1357..f70444d 100644
@@ -485,53 +545,62 @@ index 8d1c8b6..3ad7dfd 100644
 \ No newline at end of file
 ```
 
-## More About `git commit --amend`
-One day you made a big, beautiful commit message and 5 minutes later you find a code change and need to commit again?
+## Mais Sobre `git commit --amend`
+Um dia você fez uma mensagem de commit grande e bonita e 5 minutos depois você encontra uma mudança de código e precisa commitar novamente?
 
-Why not just commit to the same last commit if it's just a small change? `--amend` can help with this.
+Por que não apenas commitar para o mesmo último commit se for apenas uma pequena mudança? `--amend` pode ajudar com isso.
 
-The `git commit --amend` command is used to modify the most recent commit in Git. It allows you to correct the commit message, add or remove changes from the commit, or even update both the changes and the message in one go.
+O comando `git commit --amend` é usado para modificar o commit mais recente no Git. Ele permite que você corrija a mensagem do commit, adicione ou remova alterações do commit ou até mesmo atualize as alterações e a mensagem de uma só vez.
 
-This command is particularly useful when:
-- You realize that the commit message needs to be improved.
-- You forgot to include some changes in the commit.
+Este comando é particularmente útil quando:
 
-### Usage:
+- Você percebe que a mensagem do commit precisa ser aprimorada.
+- Você esqueceu de incluir algumas alterações no commit.
+
+### Uso:
 ```bash
 git commit --amend
 ```
 
-By default, running this command will open the commit editor to allow you to modify the commit message. You can also pass the `-m` option to directly update the commit message.
+Por padrão, executar este comando abrirá o editor de commit para permitir que você modifique a mensagem do commit. Você também pode passar a opção `-m` para atualizar diretamente a mensagem do commit.
 
-#### Example 1: Modify the Commit Message
-If you want to update the message of the last commit, you can use:
+#### Exemplo 1: Modificar a Mensagem do Commit
+Se você quiser atualizar a mensagem do último commit, pode usar:
+
 ```bash
-git commit --amend -m "Updated commit message"
+git commit --amend -m "Mensagem de commit atualizada"
 ```
-- This will replace the message of the last commit with the new one.
 
-#### Example 2: Add Missed Changes
-If you realize that you forgot to stage some changes for the last commit, you can:
+- Isso substituirá a mensagem do último commit pela nova.
 
-1. Stage the changes you missed:
+#### Exemplo 2: Adicionar Alterações Perdidas
+Se você perceber que esqueceu de adicionar algumas alterações ao stage para o último commit, você pode:
+
+1. Adicionar as alterações que você perdeu ao stage:
+
 ```bash
 git add .
 ```
 
-2. Amend the commit with the staged changes:
+2. Emendar o commit com as alterações adicionadas ao stage:
+
 ```bash
 git commit --amend
 ```
-- This will open the commit editor again, where you can modify the commit message if desired. If you don't want to change the message, simply save and close the editor.
 
-The amended commit will now include both the original changes and the newly staged changes.
+- Isso abrirá o editor de commit novamente, onde você pode modificar a mensagem do commit, se desejar. Se você não quiser alterar a mensagem, simplesmente salve e feche o editor.
 
-#### Example 3: Completely Replace the Commit (Message + Changes)
-If you want to both change the commit message and the changes, stage the changes first and then run the `--amend` command:
+O commit emendado agora incluirá as alterações originais e as alterações recém-adicionadas ao stage.
+
+#### Exemplo 3: Substituir Completamente o Commit (Mensagem + Alterações)
+
+Se você quiser alterar a mensagem do commit e as alterações, adicione as alterações ao stage primeiro e, em seguida, execute o comando `--amend`:
+
 ```bash
 git add .
-git commit --amend -m "New commit message with updated changes"
+git commit --amend -m "Nova mensagem de commit com alterações atualizadas"
 ```
-- This will replace the last commit with the new changes and the new commit message.
 
-***`git commit --amend`** rewrites the last commit, so it changes its commit hash. This can cause issues if the commit has already been pushed to a shared repository. It's recommended to only amend commits that haven't been pushed yet, or to use it cautiously if you have already shared your changes.*
+- Isso substituirá o último commit pelas novas alterações e a nova mensagem de commit.
+
+***`git commit --amend`** reescreve o último commit, então ele muda seu hash de commit. Isso pode causar problemas se o commit já tiver sido enviado para um repositório compartilhado. Recomenda-se emendar apenas commits que ainda não foram enviados ou usá-lo com cautela se você já tiver compartilhado suas alterações.*

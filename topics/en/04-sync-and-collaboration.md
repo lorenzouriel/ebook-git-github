@@ -1,5 +1,4 @@
 # A Guide to Synchronization and Collaboration
-
 Here is the main point for using GitHub, synchronization and collaboration between teams.
 
 Or personal projects with a friend. Focus on using it this way and you will understand how functional it is.
@@ -55,28 +54,24 @@ git push --tags
 - Sends all locally created tags to the remote repository.
 
 ## Getting Changes from the Remote Repository (`git pull` and `git fetch`)
-
 To stay up to date with remote changes, you can pull or fetch updates.
 
 ### 1. Update your Local Repository with the Latest Changes and Merge Automatically
 ```bash
 git pull main
 ```
-
 - Equivalent to `git fetch` followed by `git merge`, it downloads and integrates remote changes.
 
 ### 2. Fetch Changes from the Remote Repository Without Merging
 ```bash
 git fetch
 ```
-
 - Downloads updates but does not apply them automatically.
 
 ### 3. Merge Fetched Changes Manually
 ```bash
 git merge
 ```
-
 - Merges the fetched updates into your local branch.
 
 ## Removing Local and Remote Repositories
@@ -85,12 +80,10 @@ To delete a Git repository from your local machine, you can remove the directory
 ```bash
 # Using Bash (Linux/macOS)
 rm -rf /path/to/your/repository
-git commit -m "Remove tests_git directory"
-git push
 
 # Using PowerShell (Windows)
-git rm -r --cached /projects/portfolio/tests_git
 Remove-Item -Path "C:\Projects\portfolio\tests_git" -Recurse -Force
+
 git commit -m "Remove tests_git directory"
 git push
 ```
@@ -136,7 +129,6 @@ git push
 - Add a description and submit the pull request.
 
 ### 5. Sync with the Original Repository After a Merge
-
 Update your local repository with the latest changes:
 ```bash
 git fetch upstream
@@ -144,7 +136,7 @@ git checkout main
 git merge upstream/main
 ```
 
-- Push the synced main branch back to your fork:
+Push the synced main branch back to your fork:
 ```bash
 git push
 ```
@@ -211,7 +203,7 @@ To create a release on GitHub:
 - ![release](/topics/imgs/05/release.jpg)
 3. Fill in the release information, associate a tag, and click **Publish a New Release**:
 - ![release_2](/topics/imgs/05/release_2.jpg)
-4. Your releases will be organized in the Releases section under the **Code** tab:
+4. Your releases will be organized in the releases section under the **Code** tab:
 - ![release_3](/topics/imgs/05/release_3.jpg)
 
 
@@ -247,7 +239,6 @@ git merge upstream/main
 ```
 
 - Push the updates to your fork:
-
 ```bash
 git push origin main
 ```
@@ -258,9 +249,8 @@ git push origin main
 - Click **Create Pull Request** and add a descriptive message.
 - Once reviewed and approved, the maintainer can merge your contribution.
 
-## More About the git remote Command
+## More About the `git remote` Command
 
-More About the git remote Command
 The git remote command is used to manage remote repositories in Git. It allows you to view, add, and remove remotes in your repository.
 
 ### 1. View the Current Remotes
@@ -340,4 +330,4 @@ git fetch origin
 
 This retrieves changes from the remote but does not merge them into your current branch.
 
-By mastering the `git remote command`, you can easily manage remote repositories, set up multiple remotes, and maintain proper synchronization with your team's workflow.
+The idea here was to show some examples and flows that you will repeat while developing your projects.
