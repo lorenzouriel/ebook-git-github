@@ -144,7 +144,7 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 cd c:\path\vagrant
 ```
 
-3. This command creates a file called README.md and inserts the text #up-website-with-vagrant into it. The >> is a redirection operator that appends the text to the end of the file, or creates the file if it doesn't exist.
+3. This command creates a file called `README.md` and inserts the text `#up-website-with-vagrant` into it. The `>>` is a redirection operator that appends the text to the end of the file, or creates the file if it doesn't exist.
 ```shell
 echo "# up-website-with-vagrant" >> README.md
 ```
@@ -154,7 +154,7 @@ echo "# up-website-with-vagrant" >> README.md
 git init
 ```
 
-5. Adds the file README.md to the index. This prepares the file to be included in the next commit.
+5. Adds the file `README.md` to the index. This prepares the file to be included in the next commit.
 ```shell
 git add README.md
 ```
@@ -169,17 +169,17 @@ git add .
 git commit -m "first commit"
 ```
 
-8. Renames the repository's default branch to main. This command is used to update the main branch name to follow the latest naming practices, replacing the old master.
+8. Renames the repository's default branch to `main`. This command is used to update the main branch name to follow the latest naming practices, replacing the old master.
 ```shell
 git branch -M main
 ```
 
-9. Adds a remote repository named "origin". The term "origin" is a standard term used to refer to the main remote repository. The URL is the repository's address on GitHub.
+9. Adds a remote repository named "`origin`". The term "`origin`" is a standard term used to refer to the main remote repository. The URL is the repository's address on GitHub.
 ```shell
 git remote add origin https://github.com/lorenzouriel/up-website-with-vagrant.git
 ```
 
-10. Pushes the local repository to the remote repository ("origin") on the main branch. The -u establishes a tracking relationship, automatically associating the local branch with the remote branch. This is useful for future git pull and git push without having to specify the branch.
+10. Pushes the local repository to the remote repository ("`origin`") on the main branch. The -u establishes a tracking relationship, automatically associating the local branch with the remote branch. This is useful for future git pull and git push without having to specify the branch.
 ```shell
 git push -u origin main
 ```

@@ -1,11 +1,11 @@
 # Um Guia para Trabalhar com Branchs
-Então, você já sabe o que é um branch e por que você deveria ter um. Mas agora, como você trabalha com eles?
-
-Vamos ver!
+Então, você já sabe o que é um branch e por que você deveria ter um. Mas agora, como você trabalha e utiliza elas?
 
 # O que é uma Git Branch?
 
-**Uma Git branch é uma linha independente de desenvolvimento dentro de um repositório.** Pense nela como um espaço de trabalho separado onde você pode fazer alterações sem impactar a branch principal (ou padrão). As branches permitem que os desenvolvedores trabalhem em novas funcionalidades, correções de bugs ou experimentos sem interromper a versão atual do projeto.
+**Uma Git branch é uma linha independente de desenvolvimento dentro de um repositório.** Pense nela como um espaço de trabalho separado onde você pode fazer alterações sem impactar a branch principal. 
+
+As branches permitem que os desenvolvedores trabalhem em novas funcionalidades, correções de bugs ou experimentos sem interromper a versão atual do projeto.
 
 # Por que usar Branches?
 As branches oferecem diversos benefícios em um fluxo de trabalho de desenvolvimento:
@@ -105,7 +105,7 @@ git branch -D feature/create-chapter-branch
 4. Envie regularmente branches para o remoto (`git push origin branch-name`) para evitar perda acidental.
 
 ## Fazendo Merge de Branches
-No Git, **`merge` é o processo de integrar alterações de uma branch em outra.** É comumente usado para combinar atualizações de diferentes branches de desenvolvimento na branch principal, como `main` ou `develop`.
+No Git, **`merge` é o processo de integrar alterações de uma branch em outra.** É usado para combinar atualizações de diferentes branches de desenvolvimento na branch principal, como `main` ou `develop`.
 
 ### 1. Fazer Merge de uma Branch na Branch Atual
 
@@ -189,7 +189,7 @@ Merge branch 'feature/create-chapter-branch' into main
 4. Delete branches mescladas para manter o repositório limpo.
 
 ## Fazendo Rebase de Branches
-Rebasing é um recurso poderoso do Git que **permite integrar alterações de uma branch em outra, movendo sua branch para o estado mais recente da branch de destino.** Ao contrário do merge, que cria um novo commit de merge, **o rebasing repete seus commits em cima das últimas alterações, mantendo o histórico de commits mais limpo.**
+Rebasing é um recurso do Git que **permite integrar alterações de uma branch em outra, movendo sua branch para o estado mais recente da branch de destino.** Ao contrário do merge, que cria um novo commit de merge, **o rebasing repete seus commits em cima das últimas alterações, mantendo o histórico de commits mais limpo.**
 
 Quando usar rebase?
 - Para manter uma feature branch atualizada com a branch principal.
@@ -205,9 +205,7 @@ git rebase main
 
 Isso atualiza a `feature/create-chapter-branch` com os commits mais recentes de `main`, garantindo que ela seja baseada nas alterações mais recentes.
 
-*⚠ Se ocorrerem conflitos durante o rebasing, o Git irá parar e pedir para você resolvê-los antes de continuar.*
-
-### 2. Abortar um Rebase em Andamento
+### 2. Cancelar um Rebase em Andamento
 Se algo der errado durante o rebasing e você quiser cancelar o processo, use:
 ```shell
 git rebase --abort
@@ -228,7 +226,7 @@ Então, continue o rebase:
 git rebase --continue
 ```
 
-O Git continuará aplicando os commits restantes. Se outro conflito ocorrer, repita o processo até que o rebase seja concluído.
+O Git continuará aplicando os commits restantes. Se outro conflito ocorrer, repita o processo.
 
 ### 4. Rebase Interativo (modificar histórico de commits)
 Para editar, reordenar, juntar (squash) ou remover commits, use o rebase interativo:
@@ -294,7 +292,7 @@ Isso irá juntar o segundo commit no primeiro, combinando suas alterações.
 - Se não tiver certeza, crie uma branch de backup antes de fazer rebase.
 
 ## Branches Remotas e Rastreamento de Branches
-Branches remotas são versões das suas branches armazenadas em um repositório remoto (por exemplo, GitHub, GitLab, Bitbucket). Essas branches permitem a colaboração entre vários desenvolvedores, mantendo seus repositórios locais sincronizados com o remoto.
+Branches remotas são versões das suas branches armazenadas em um repositório remoto. Essas branches permitem a colaboração entre vários desenvolvedores, mantendo seus repositórios locais sincronizados com o remoto.
 
 ### Por que usar branches remotas?
 - Para colaborar com outras pessoas enviando e recebendo alterações.
@@ -357,8 +355,6 @@ Se a branch já estiver rastreando `origin/main`, você pode simplesmente execut
 ```shell
 git pull
 ```
-
-*⚠ Se ocorrerem conflitos, resolva-os manualmente e faça commit das alterações.*
 
 ### 5. Enviar uma Nova Branch Local para o Repositório Remoto
 Depois de criar uma nova branch localmente, envie-a para o repositório remoto:
@@ -679,7 +675,7 @@ git reset --hard HEAD~1
 git push --force
 ```
 
-- *⚠️ `git push --force` sobrescreve o histórico e pode causar problemas se outros já tiverem recebido o commit.*
+- *`git push --force` sobrescreve o histórico e pode causar problemas se outros já tiverem recebido o commit.*
 
 Se o commit já tiver sido compartilhado, use revert em vez disso:
 ```shell

@@ -144,7 +144,7 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 cd c:\path\vagrant
 ```
 
-3. Este comando cria um arquivo chamado README.md e insere o texto #up-website-with-vagrant nele. O >> é um operador de redirecionamento que anexa o texto ao final do arquivo, ou cria o arquivo se ele não existir.
+3. Este comando cria um arquivo chamado `README.md` e insere o texto `#up-website-with-vagrant` nele. O `>>` é um operador de redirecionamento que anexa o texto ao final do arquivo, ou cria o arquivo se ele não existir.
 ```shell
 echo "# up-website-with-vagrant" >> README.md
 ```
@@ -154,7 +154,7 @@ echo "# up-website-with-vagrant" >> README.md
 git init
 ```
 
-5. Adiciona o arquivo README.md ao índice. Isso prepara o arquivo para ser incluído no próximo commit.
+5. Adiciona o arquivo `README.md` ao índice. Isso prepara o arquivo para ser incluído no próximo commit.
 ```shell
 git add README.md
 ```
@@ -169,7 +169,7 @@ git add .
 git commit -m "first commit"
 ```
 
-8. Renomeia o branch padrão do repositório para main. Este comando é usado para atualizar o nome do branch principal para seguir as práticas de nomenclatura mais recentes, substituindo o antigo master.
+8. Renomeia o branch padrão do repositório para `main`. Este comando é usado para atualizar o nome do branch principal para seguir as práticas de nomenclatura mais recentes, substituindo o antigo master.
 ```shell
 git branch -M main
 ```

@@ -1,11 +1,11 @@
 # Um Guia para Sincronização e Colaboração
 
-Aqui está o ponto principal para usar o GitHub: sincronização e colaboração entre equipes ou projetos pessoais com um amigo. Foque em utilizá-lo dessa forma e você entenderá como ele é funcional.
+Aqui está o ponto principal para usar o GitHub: sincronização e colaboração entre equipes ou projetos pessoais com um amigo. Foque em utilizá-lo dessa forma e você entenderá como ele pode ser funcional.
 
 ## Configurando Repositórios Remotos
-Repositórios remotos são versões do seu projeto hospedadas na internet ou em uma rede, permitindo que vários desenvolvedores colaborem. Eles servem como o hub central para armazenar e compartilhar alterações no projeto.
+Repositórios remotos são versões do seu projeto hospedadas na internet, permitindo que vários desenvolvedores colaborem. Eles servem como o hub central para armazenar e compartilhar alterações no projeto.
 
-Para trabalhar com repositórios remotos, você precisa adicioná-los, modificá-los ou removê-los conforme necessário. Abaixo estão os comandos principais para gerenciar repositórios remotos:
+Para trabalhar com repositórios remotos, você precisa adicioná-los, modificá-los ou removê-los conforme necessário. Esse é um 80/20 dos repositórios remotos:
 
 ### 1. Adicionar um Repositório Remoto
 ```bash
@@ -17,13 +17,13 @@ git remote add origin https://github.com/lorenzouriel/ebook-git-github.git
 ```bash
 git remote -v
 ```
-- Este comando lista todos os repositórios remotos configurados, juntamente com suas URLs de fetch e push.
+- Este comando lista todos os repositórios remotos configurados, juntamente com suas URLs de `fetch` e `push`.
 
 ### 3. Alterar a URL de um Repositório Remoto
 ```bash
 git remote set-url origin https://github.com/lorenzouriel/ebook-git-github.git
 ```
-- Útil ao mudar a localização remota, como migrar para outro provedor.
+- Útil ao mudar a localização remota, como migrar para outro provedor ou repositório.
 
 ### 4. Remover um Repositório Remoto
 ```bash
@@ -250,7 +250,7 @@ git push origin main
 - Clique em **Create Pull Request** e adicione uma mensagem descritiva.
 - Após revisão e aprovação, o mantenedor pode fazer o merge da sua contribuição.
 
-# Mais Sobre o Comando `git remote`
+## Mais Sobre o Comando `git remote`
 
 O comando `git remote` é usado para gerenciar repositórios remotos no Git. Ele permite visualizar, adicionar e remover remotos no seu repositório.
 

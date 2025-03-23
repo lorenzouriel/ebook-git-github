@@ -1,7 +1,5 @@
 # A Guide to Synchronization and Collaboration
-Here is the main point for using GitHub, synchronization and collaboration between teams.
-
-Or personal projects with a friend. Focus on using it this way and you will understand how functional it is.
+Here is the main point for using GitHub, synchronization and collaboration between teams or personal projects with a friend. Focus on using it this way and you will understand how functional it is.
 
 ## Setting Up Remote Repositories
 Remote repositories are versions of your project hosted on the internet or network, allowing multiple developers to collaborate. They serve as the central hub for storing and sharing project changes.

@@ -96,8 +96,8 @@ Esse comando cria uma nova chave SSH usando o e-mail fornecido como etiqueta.
 Quando for solicitado a "Inserir um arquivo para salvar a chave", pressione **Enter** para aceitar o local padrão `(~/.ssh/id_ed25519 ou ~/.ssh/id_rsa)`.
 
 Em seguida, será solicitado que você insira uma senha. Você pode:
-- Digitar uma senha segura (recomendado para maior segurança), ou  
-- Pressionar **Enter** para pular a criação da senha (menos seguro, mas mais conveniente).
+- Digitar uma senha segura (recomendado para maior segurança) 
+- Pressionar **Enter** para pular a criação da senha (menos seguro, mas mais conveniente)
 
 #### 4. Adicionar Sua Chave SSH ao Agente SSH
 Para gerenciar sua chave SSH, é necessário garantir que o agente SSH esteja em execução:

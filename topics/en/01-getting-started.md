@@ -96,8 +96,8 @@ This command creates a new SSH key using the provided email as a label.
 When prompted to "Enter a file in which to save the key," press Enter to accept the default location `(~/.ssh/id_ed25519 or ~/.ssh/id_rsa)`.
 
 You'll then be asked to enter a passphrase. You can either:
-- Enter a secure passphrase (recommended for better security), or
-- Press Enter to skip creating a passphrase (less secure but more convenient).
+- Enter a secure passphrase (recommended for better security)
+- Press Enter to skip creating a passphrase (less secure but more convenient)
 
 #### 4. Add Your SSH Key to the SSH Agent
 To manage your SSH key, you need to ensure the SSH agent is running:
