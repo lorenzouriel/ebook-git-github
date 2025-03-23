@@ -137,7 +137,7 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 
 ## Criando um Repositório Local e Remoto
 1. Vá para seu GitHub e crie um novo repositório:
-- ![1](content/imgs/02/1.jpg)
+- ![1](content/imgs/02/git_new_repo.jpg)
 
 2. Navegue até o diretório local onde você quer criar o repositório
 ```shell
