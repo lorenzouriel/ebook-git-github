@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/ZNCmHE6.jpeg" height="450" width="auto"></p>
+<p align="center"><img src="https://imgur.com/rU4AHlZ.jpg" height="450" width="auto"></p>
 
 <div align="center">
     <p>
@@ -17,21 +17,8 @@ Eu foco em abordar os principais conceitos e adiciono bastante comando para prat
 
 ## 🚀 Download
 Para baixar uma cópia do e-book, use um dos seguintes links:
-- [Modo Escuro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-pt/export/git-ebook-dark.pdf)
-- [Modo Claro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-pt/export/git-ebook-light.pdf)
-
-## 📖 Capítulos
-Os capítulos focam em construir uma base sólida dos conceitos, seguidos por exemplos práticos e scripts.
-
-* [**Iniciando no Universo do Git & GitHub**](/ebook-pt/content/01-iniciando-no-git.md)
-* [**Conceitos Fundamentais**](/ebook-pt/content/02-conceitos-fundamentais.md)
-* [**Trabalhando com Branches**](/ebook-pt/content/03-trabalhando-com-branches.md)
-* [**Sincronização e Colaboração**](/ebook-pt/content/04-colaboracao-e-sincronizacao.md)
-* [**Gerenciamento de Repositórios**](/ebook-pt/content/05-gerenciamento-de-repositorios.md)
-* [**Práticas Recomendadas**](/ebook-pt/content/06-praticas-recomendadas.md)
-* [**Solução de Problemas**](/ebook-pt/content/07-solucao-de-problemas.md)
-* [**Ferramentas e Integrações**](/ebook-pt/content/08-ferramentas-e-integracoes.md)
-
+- [Modo Escuro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebooks/portuguese/export/guia-git-github-dark.pdf)
+- [Modo Claro](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebooks/portuguese/export/guia-git-github-light.pdf)
 
 ## 🤲 Contribuindo
 Se desejar contribuir, por favor, envie a sua pull request para análise.
@@ -59,7 +46,7 @@ Para qualquer dúvida ou feedback, sinta-se à vontade para entrar em contato co
 ---
 ---
 
-<p align="center"><img src="https://i.imgur.com/8Hv1mgT.jpeg" height="450" width="auto"></p>
+<p align="center"><img src="https://i.imgur.com/n11wHaF.png" height="450" width="auto"></p>
 
 ## 💡 Git & GitHub E-Book
 Welcome to my **Git & GitHub E-Book**! This book is a guide to get you started with Git and GitHub.
@@ -68,20 +55,8 @@ I focus on covering the core concepts and add plenty of practice commands to hel
 
 ## 🚀 Download
 To download a copy of the e-book, use one of the following links:
-- [Dark Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-en/export/git-ebook-dark.pdf)
-- [Light Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebook-en/export/git-ebook-light.pdf)
-
-## 📖 Chapters
-Chapters focus on building a solid foundation of concepts, followed by practical examples and scripts.
-
-* [**Getting Started in the Git & GitHub Universe**](/ebook-en/content/01-getting-started.md)
-* [**Fundamental Concepts**](/ebook-en/content/02-fundamental-concepts.md)
-* [**Working with Branches**](/ebook-en/content/03-working-with-branches.md)
-* [**Synchronization and Collaboration**](/ebook-en/content/04-sync-and-collaboration.md)
-* [**Repository Management**](/ebook-en/content/05-repository-management.md)
-* [**Best Practices**](/ebook-en/content/06-best-practices.md)
-* [**Troubleshooting**](/ebook-en/content/07-troubleshooting.md)
-* [**Tools and Integrations**](/ebook-en/content/08-tools-and-integrations.md)
+- [Dark Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebooks/english/export/guide-git-github-dark.pdf)
+- [Light Mode](https://github.com/lorenzouriel/ebook-git-github/blob/main/ebooks/english/export/guide-git-github-light.pdf)
 
 ## 🤲 Contributing
 If you wish to contribute, please submit your pull request for review.
