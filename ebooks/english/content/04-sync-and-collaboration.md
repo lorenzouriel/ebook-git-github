@@ -90,9 +90,9 @@ git push
 To delete a remote repository on GitHub, follow these steps:
 1. Navigate to the repository page on GitHub.
 2. Go to the Settings section of the repository.
-- ![delete_repository](/topics/imgs/05/delete_repository.jpg)
+- ![delete_repository](content/imgs/05/delete_repository.jpg)
 3. Scroll down to find the Delete this repository option.
-- ![delete_repository_2](/topics/imgs/05/delete_repository_2.jpg)
+- ![delete_repository_2](content/imgs/05/delete_repository_2.jpg)
 4. Confirm the deletion by entering your password or using GitHub Mobile.
 
 ## Complete Flow Example
@@ -198,11 +198,11 @@ git push origin --delete v1
 To create a release on GitHub:
 1. Navigate to the Releases section of the repository.
 2. Click **Create a New Release**
-- ![release](/topics/imgs/05/release.jpg)
+- ![release](content/imgs/05/release.jpg)
 3. Fill in the release information, associate a tag, and click **Publish a New Release**:
-- ![release_2](/topics/imgs/05/release_2.jpg)
+- ![release_2](content/imgs/05/release_2.jpg)
 4. Your releases will be organized in the releases section under the **Code** tab:
-- ![release_3](/topics/imgs/05/release_3.jpg)
+- ![release_3](content/imgs/05/release_3.jpg)
 
 
 ## Working with Forks and Pull Requests
@@ -210,7 +210,7 @@ Forking a repository allows you to contribute to a project without modifying the
 
 ### 1. Fork a Repository
 On GitHub  use the web interface to fork the desired repository.
-- ![fork](/topics/imgs/04/fork.png)
+- ![fork](content/imgs/04/fork.jpg)
 
 ### 2. Clone the Forked Repository
 ```bash
