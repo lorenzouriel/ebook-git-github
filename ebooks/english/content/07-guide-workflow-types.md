@@ -35,7 +35,7 @@ git push origin main
 ```
 
 ### Diagram
-![trunk-based](/topics/imgs/07-guide-workflow-types/trunk-based.png)
+![trunk-based](content/imgs/07-guide-workflow-types/trunk-based.jpg)
 
 ## GitFlow
 Instead of having just one principal branch, we always have two, the `main` and the `dev`. 
@@ -137,7 +137,7 @@ Summary of actions:
 If you want to know more about the commands, I recommend this [Gitflow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.html).
 
 ### Diagram
-![gitflow](/topics/imgs/07-guide-workflow-types/gitflow.png)
+![gitflow](content/imgs/07-guide-workflow-types/gitflow.jpg)
 
 ## Feature Branch
 The core is for teams working on multiple features simultaneously, here each feature is developed in a separate branch and feature branches merge back into `main` after review. 
@@ -164,7 +164,7 @@ git push origin feature-article
 4. After approval, merge into `main` on the remote and local repository.
 
 ### Diagram
-![feature-branch](/topics/imgs/07-guide-workflow-types/feature-branch.png)
+![feature-branch](content/imgs/07-guide-workflow-types/feature-branch.jpg)
 
 ## Forking Workflow
 Developers fork a repository instead of working directly on it. Recommended and most used on Open-Source projects.
@@ -190,6 +190,6 @@ git push origin feature-article
 4. Submit a Pull Request to the original repository.
 
 ### Diagram 
-![forking-workflow](/topics/imgs/07-guide-workflow-types/forking-workflow.png)
+![forking-workflow](content/imgs/07-guide-workflow-types/forking-workflow.jpg)
 
 By learning this, you will be able to decide which workflow best suits you and your team, remembering that in many cases we already use one without even realizing it.

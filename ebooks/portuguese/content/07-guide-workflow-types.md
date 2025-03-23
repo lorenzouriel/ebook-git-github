@@ -37,7 +37,7 @@ git push origin main
 ```
 
 ### Diagrama
-![trunk-based](/topics/imgs/07-guide-workflow-types/trunk-based.png)
+![trunk-based](content/imgs/07-guide-workflow-types/trunk-based.jpg)
 
 ## GitFlow
 Em vez de ter apenas uma branch principal, sempre temos duas: `main` e `dev`.
@@ -139,7 +139,7 @@ Summary of actions:
 Se quiser saber mais sobre os comandos, recomendo este [GitFlow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.html).
 
 ### Diagrama
-![gitflow](/topics/imgs/07-guide-workflow-types/gitflow.png)
+![gitflow](content/imgs/07-guide-workflow-types/gitflow.jpg)
 
 ## Feature Branch
 Ideal para equipes que trabalham em múltiplas features simultaneamente. Cada feature é desenvolvida em uma branch separada e só é mesclada na `main` após revisão.
@@ -164,7 +164,7 @@ git push origin feature-article
 4. Após a aprovação, mesclar na `main` no repositório remoto e local.
 
 ### Diagrama
-![feature-branch](/topics/imgs/07-guide-workflow-types/feature-branch.png)
+![feature-branch](content/imgs/07-guide-workflow-types/feature-branch.jpg)
 
 ## Forking Workflow
 Os desenvolvedores fazem um fork do repositório em vez de trabalhar diretamente nele. Este modelo é recomendado e amplamente utilizado em projetos Open-Source.
@@ -190,6 +190,6 @@ git push origin feature-article
 4. Submeter um Pull Request para o repositório original.
 
 ### Diagrama
-![forking-workflow](/topics/imgs/07-guide-workflow-types/forking-workflow.png)
+![forking-workflow](content/imgs/07-guide-workflow-types/forking-workflow.jpg)
 
 Ao aprender isso, você poderá decidir qual workflow mais se adapta a você e sua equipe, lembrando que em muitos casos já utilizamos um sem nem perceber.

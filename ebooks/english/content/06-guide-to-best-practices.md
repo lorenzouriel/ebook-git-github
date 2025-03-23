@@ -1,5 +1,4 @@
 # A Guide to Best Practices
-
 You need to learn some best practices before making your next commit.
 
 What is the best type of message? Or the best name for the branches?

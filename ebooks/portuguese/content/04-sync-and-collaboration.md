@@ -95,7 +95,7 @@ git push
 Para deletar um repositório remoto no GitHub:
 1. Navegue até a página do repositório no GitHub.
 2. Vá até a seção **Configurações** do repositório.
-- ![delete_repository](/topics/imgs/05/delete_repository.jpg)
+- ![delete_repository](content/imgs/05/delete_repository.jpg)
 3. Role até encontrar a opção **Deletar repositório**.
 4. Confirme a exclusão inserindo sua senha ou usando o GitHub Mobile.
 
@@ -201,11 +201,11 @@ git push origin --delete v1
 Para criar um release no GitHub:
 1. Navegue até a seção **Releases** do repositório.
 2. Clique em **Create a New Release**.
-- ![release](/topics/imgs/05/release.jpg)
+- ![release](content/imgs/05/release.jpg)
 3. Preencha as informações da versão, associe uma tag e clique em **Publish a New Release**:
-- ![release_2](/topics/imgs/05/release_2.jpg)
+- ![release_2](content/imgs/05/release_2.jpg)
 4. Seus releases serão organizados na seção releases na aba **Code**:
-- ![release_3](/topics/imgs/05/release_3.jpg)
+- ![release_3](content/imgs/05/release_3.jpg)
 
 
 ## Trabalhando com Forks e Pull Requests
@@ -213,7 +213,7 @@ Fazer um fork de um repositório permite que você contribua para um projeto sem
 
 ### 1. Fazer Fork de um Repositório
 No GitHub, use a interface web para fazer fork do repositório desejado.
-- ![fork](/topics/imgs/04/fork.png)
+- ![fork](content/imgs/04/fork.jpg)
 
 ### 2. Clone o Repositório
 ```bash

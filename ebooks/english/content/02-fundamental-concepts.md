@@ -1,5 +1,4 @@
 # A Guide to Fundamental Concepts
-
 Without understanding the fundamentals, its history and what it makes up. It doesn't make sense for a man to continue walking the path.
 
 Okay, I didn't need to say that catchphrase. But we'll focus on this chapter as a general introduction to what constitutes Git & GitHub.
@@ -133,11 +132,11 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 ```
 
 ### **Architecture, Concepts and Commands:**
-- ![architecture_git](/topics/imgs/02/architecture_git.jpg)
+- ![architecture_git](content/imgs/02/architecture_git.jpg)
 
 ## Creating a Local and Remote Repo
 1. Go to your GitHub and create a new repository:
-- ![1](/topics/imgs/02/1.png)
+- ![1](content/imgs/02/1.jpg)
 
 2. Navigate to the local directory where you want to create the repository
 ```shell
@@ -185,7 +184,7 @@ git push -u origin main
 ```
 
 We can check our remote repository:
-- ![10](/topics/imgs/02/10.png)
+- ![10](content/imgs/02/10.jpg)
 
 ## What is Versioning and Tags?
 
@@ -206,7 +205,7 @@ I'll explain the difference in a simple and practical way:
 - **Build:** This is an internal control of Git and versioning, it is not necessarily visible when you specify the version.
 
 **Example:**
-- ![tags_versioning](/topics/imgs/02/tags_versioning.png)
+- ![tags_versioning](content/imgs/02/tags_versioning.jpg)
 
 ## Introduction to Markdown
 Markdown is a lightweight markup language used to format text in a simple and easy-to-read way.
@@ -244,7 +243,7 @@ Created by John Gruber and Aaron Swartz in 2004, its goal is to be readable in p
 #### Images:
 - Images are inserted similarly to links, but with an exclamation point `!` before them.
 ```md
-![Project Logo](images/logo.png)
+![Project Logo](images/logo.jpg)
 ```
 
 #### Emphasis (bold and italics):
@@ -270,6 +269,6 @@ This is an **amazing project** that uses _modern technologies_.
 
 #### Code:
 - To include code blocks, use three backticks before and after the block. You can specify the programming language for syntax highlighting.
-- ![md_code](/topics/imgs/02/md_code.png)
+- ![md_code](content/imgs/02/md_code.jpg)
 
 So far we understand what makes up Git and how to start your first project, let's delve deeper into what we've seen so far!

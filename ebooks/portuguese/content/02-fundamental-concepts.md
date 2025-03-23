@@ -133,11 +133,11 @@ git clone https://github.com/lorenzouriel/ebook-git-github.git
 ```
 
 ### **Arquitetura, Conceitos e Comandos:**
-- ![architecture_git](/topics/imgs/02/architecture_git.jpg)
+- ![architecture_git](content/imgs/02/architecture_git.jpg)
 
 ## Criando um Repositório Local e Remoto
 1. Vá para seu GitHub e crie um novo repositório:
-- ![1](/topics/imgs/02/1.png)
+- ![1](content/imgs/02/1.jpg)
 
 2. Navegue até o diretório local onde você quer criar o repositório
 ```shell
@@ -185,7 +185,7 @@ git push -u origin main
 ```
 
 Podemos verificar nosso repositório remoto:
-- ![10](/topics/imgs/02/10.png)
+- ![10](content/imgs/02/10.jpg)
 
 
 ## O que é Versionamento e Tags?
@@ -204,6 +204,9 @@ Vou explicar de forma simples e prática:
 - **Minor:** Mudanças importantes compatíveis com a versão anterior (Adicionou uma nova funcionalidade? Adicione +1 - v2.1.0)
 - **Correction:** Correções de erros e bugs que não afetam a versão (Encontrou um bug e corrigiu? Adicione +1 - v2.1.1)
 - **Build:** Controle interno do Git e versionamento, não necessariamente visível ao especificar a versão.
+
+**Exemplo:**
+- ![tags_versioning](content/imgs/02/tags_versioning.jpg)
 
 ## Introdução ao Markdown
 
@@ -242,7 +245,7 @@ Criada por John Gruber e Aaron Swartz em 2004, seu objetivo é ser lida em texto
 #### Imagens:
 - As imagens são inseridas de forma semelhante aos links, mas com um ponto de exclamação `!` antes delas.
 ```md
-![Logotipo do projeto](images/logo.png)
+![Logotipo do projeto](images/logo.jpg)
 ```
 
 #### Ênfase (negrito e itálico):
@@ -268,6 +271,6 @@ Este é um **projeto incrível** que usa _tecnologias modernas_.
 
 #### Código:
 - Para incluir blocos de código, use três acentos graves antes e depois do bloco. Você pode especificar a linguagem de programação para realce de sintaxe.
-- ![md_code](/topics/imgs/02/md_code.png)
+- ![md_code](content/imgs/02/md_code.jpg)
 
 Até agora entendemos o que compõe o Git e como começar seu primeiro projeto, vamos nos aprofundar no que vimos até agora!

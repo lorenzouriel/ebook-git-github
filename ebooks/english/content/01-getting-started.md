@@ -1,5 +1,4 @@
 # A Guide to Getting Started in the Git & GitHub
-
 Who are they? Where do they live? What do they eat? And, best of all, how to install it?
 
 ## What is Git?

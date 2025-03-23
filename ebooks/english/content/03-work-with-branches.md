@@ -1,5 +1,4 @@
 # A Guide to Work with Branches
-
 So, you already know what a branch is and why you should have one. But now, how to work with them?
 
 Let's see!
@@ -665,7 +664,7 @@ If you accidentally pushed a commit and need to undo it before others pull it:
 git reset --hard HEAD~1
 git push --force
 ```
-- *⚠️ `git push --force` overwrites history and can cause problems if others have already pulled the commit.*
+- *`git push --force` overwrites history and can cause problems if others have already pulled the commit.*
 
 If the commit has already been shared, use revert instead:
 ```shell
