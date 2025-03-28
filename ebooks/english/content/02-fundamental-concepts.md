@@ -3,14 +3,12 @@ Without understanding the fundamentals, its history and what it makes up. It doe
 
 Okay, I didn't need to say that catchphrase. But we'll focus on this chapter as a general introduction to what constitutes Git & GitHub.
 
-## Introduction to Repositories and Concepts
+## Introduction to Repositories and Main Concepts
 
 A **repository** is where a project's files, history, and changes are stored. It can be:
 
 - **Remote:** Hosted on platforms like GitHub, GitLab, or Bitbucket.
 - **Local:** Stored directly on the developer's machine.
-
-## **Main Concepts**
 
 ### **Branches**
 Branches allow developers to work on different features or fixes without affecting the main codebase. The primary branch is usually called **main**, but you can create new branches for specific tasks.

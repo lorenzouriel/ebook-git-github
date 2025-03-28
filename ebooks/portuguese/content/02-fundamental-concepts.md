@@ -4,14 +4,12 @@ Sem entender os fundamentos, sua história e o que o compõe, não faz sentido p
 
 Ok, eu não precisava dizer essa frase de efeito. Mas vamos focar neste capítulo como uma introdução geral ao que constitui Git & GitHub.
 
-## Introdução a Repositórios e Conceitos
+## Introdução a Repositórios e PrincipaisConceitos
 
 Um **repositório** é onde os arquivos, histórico e alterações de um projeto são armazenados. Ele pode ser:
 
 - **Remoto:** Hospedado em plataformas como GitHub, GitLab ou Bitbucket.
 - **Local:** Armazenado diretamente na máquina do desenvolvedor.
-
-## **Conceitos Principais**
 
 ### **Branches**
 Branches permitem que desenvolvedores trabalhem em diferentes funcionalidades ou correções sem afetar o código principal. A branch principal geralmente é chamada de **main**, mas você pode criar novas branches para tarefas específicas.

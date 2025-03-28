@@ -1,3 +1,3 @@
 # O Fim
 
-***Obrigado.***
+**Obrigado por ler até aqui!**

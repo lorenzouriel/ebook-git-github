@@ -3,11 +3,11 @@ So, you already know what a branch is and why you should have one. But now, how 
 
 Let's see!
 
-## What is a Git Branch?
+## Git Branch
 
 **A Git branch is an independent line of development within a repository.** Think of it as a separate workspace where you can make changes without affecting the main (or default) branch. Branches allow developers to work on new features, bug fixes, or experiments without disrupting the actual version of the project.
 
-## Why Use Branches?
+### Why Use Branches?
 Branches provide several benefits in a development workflow:
 - **Isolation:** Keep different tasks (features, bug fixes, experiments) separate.
 - **Collaboration:** Multiple developers can work on different branches without interfering with each other.
