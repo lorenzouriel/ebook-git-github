@@ -154,7 +154,7 @@ git push origin --delete my-chapter
 
 Este fluxo garante sincronização e colaboração enquanto contribui para projetos open-source.
 
-# Trabalhando com Tags e Releases
+## Trabalhando com Tags e Releases
 ### 1. Criar uma Tag
 As tags são usadas para marcar pontos específicos no histórico de commits, como lançamentos.
 ```bash

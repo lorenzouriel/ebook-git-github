@@ -1,13 +1,12 @@
 # Um Guia para Trabalhar com Branchs
 Então, você já sabe o que é um branch e por que você deveria ter um. Mas agora, como você trabalha e utiliza elas?
 
-# O que é uma Git Branch?
+## Git Branch
 
 **Uma Git branch é uma linha independente de desenvolvimento dentro de um repositório.** Pense nela como um espaço de trabalho separado onde você pode fazer alterações sem impactar a branch principal. 
 
 As branches permitem que os desenvolvedores trabalhem em novas funcionalidades, correções de bugs ou experimentos sem interromper a versão atual do projeto.
 
-# Por que usar Branches?
 As branches oferecem diversos benefícios em um fluxo de trabalho de desenvolvimento:
 - **Isolamento:** Mantenha tarefas diferentes (funcionalidades, correções de bugs, experimentos) separadas.
 - **Colaboração:** Vários desenvolvedores podem trabalhar em branches diferentes sem interferir uns nos outros.
@@ -19,7 +18,7 @@ No Git, a branch padrão geralmente é chamada de `main` ou `master`. No entanto
 - **Bugfix branches (`hotfix/login-fix`):** Usadas para corrigir problemas em produção.
 - **Release branches (`release/v1.2.0`):** Usadas para preparar versões estáveis para implantação.
 
-# Criando e Gerenciando Branches Locais
+## Criando e Gerenciando Branches Locais
 
 As branches no Git permitem que você trabalhe em novas funcionalidades, correções de bugs ou experimentos sem afetar a base de código principal. Aqui está como criar, alternar, renomear e deletar branches de forma eficiente.
 
